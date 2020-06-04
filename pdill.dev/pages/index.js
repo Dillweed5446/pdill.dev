@@ -28,6 +28,7 @@ export default function Home() {
             <h3>Mothercupboard</h3>
             <p>Meal Planner app that I'm building with a friend.</p>
           </a>
+        </div>
 
          {/* <a href="https://nextjs.org/learn" className="card">
             <h3>Learn &rarr;</h3>
