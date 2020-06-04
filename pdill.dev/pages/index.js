@@ -23,13 +23,13 @@ export default function Home() {
           Feel free to contact me by email at paul@pdill.dev {/*Add link here*/}
         </p>
 
-        {/* <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+        <div className="grid">
+          <a href="https://mothercupboard.com" className="card">
+            <h3>Mothercupboard</h3>
+            <p>Meal Planner app that I'm building with a friend.</p>
           </a>
 
-          <a href="https://nextjs.org/learn" className="card">
+         {/* <a href="https://nextjs.org/learn" className="card">
             <h3>Learn &rarr;</h3>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
