@@ -31,13 +31,6 @@ export default function Home() {
           </a>
         
 
-            {/* <Link href="/photo_album" >
-              <a className="card">
-                <h3>Photo Album</h3>
-                <p>Take a look at my photos!</p>
-              </a>
-            </Link> */}
-
         </div>
         {/*  <a
             href="https://github.com/vercel/next.js/tree/master/examples"
