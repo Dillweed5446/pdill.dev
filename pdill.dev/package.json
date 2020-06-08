@@ -45,7 +45,7 @@
     "linkComponents": [
       "Hyperlink",
       {"name": "Link", "linkAttribute": "to"}
-    ]
+    ],
     "react-awesome-slider": "^4.1.0",
     "react-dom": "16.13.1",
     "webpack": "^5.0.0-beta.17"
