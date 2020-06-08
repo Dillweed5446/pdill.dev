@@ -13,7 +13,6 @@
     "next": "9.4.4",
     "next-images": "^1.4.0",
     "react": "16.13.1",
-<<<<<<< HEAD
     "react-dom": "16.13.1"
   },
   "devDependencies": {
@@ -47,10 +46,8 @@
       "Hyperlink",
       {"name": "Link", "linkAttribute": "to"}
     ]
-=======
     "react-awesome-slider": "^4.1.0",
     "react-dom": "16.13.1",
     "webpack": "^5.0.0-beta.17"
->>>>>>> master
   }
 }
