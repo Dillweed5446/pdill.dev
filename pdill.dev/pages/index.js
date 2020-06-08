@@ -1,5 +1,9 @@
 import Head from 'next/head'
+<<<<<<< HEAD
 import React from 'react'
+=======
+import Link from 'next/link'
+>>>>>>> master
 
 export default function Home() {
   return (
@@ -29,14 +33,10 @@ export default function Home() {
             <h3>Mothercupboard</h3>
             <p>Meal Planner app that I'm building with a friend.</p>
           </a>
+        
+
         </div>
-
-         {/* <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
+        {/*  <a
             href="https://github.com/vercel/next.js/tree/master/examples"
             className="card"
           >
