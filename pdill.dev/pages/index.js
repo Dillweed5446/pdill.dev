@@ -2,9 +2,11 @@ import Head from 'next/head'
 import React from 'react'
 // import Link from 'next/link'
 import theme from '../src/theme'
+import { ThemeProvider } from '@material-ui/core/styles'
 
 export default function Home() {
   return (
+    <ThemeProvider theme={theme}>
     <div className="container" backgroundColor={theme.palette.background.default}>
       <Head>
         <title>Paul Dill portfolio</title>
@@ -211,5 +213,6 @@ export default function Home() {
         }
       `}</style> */}
     </div>
+    </ThemeProvider>
   )
 }
