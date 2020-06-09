@@ -13,11 +13,11 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="title" style={{color="primary"}}>
+        <h1 className="title" style={{color:"primary"}}>
         Aloha!  Welcome to my portfolio!
         </h1>
 
-        <p className="description" style={{color="secondary"}}>
+        <p className="description" style={{color:"secondary"}}>
           {/* Write intro here */}
           My name is Paul Dill.  I've been learning web development for the last year with my main focus on Front-end engineering so far.
           My goal is to hone my skills on the front end and begin work on back-end development.  This portfolio will be a way for 
@@ -28,7 +28,7 @@ export default function Home() {
           Feel free to contact me by email at paul@pdill.dev {/*Add link here*/}
         </p>
 
-        <div className="grid" style={{color="warning"}}>
+        <div className="grid" style={{color:"warning"}}>
           <a href="https://mothercupboard.com" className="card">
             <h3>Mothercupboard</h3>
             <p>Meal Planner app that I'm building with a friend.</p>
