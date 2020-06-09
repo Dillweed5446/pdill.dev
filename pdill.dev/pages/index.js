@@ -1,20 +1,21 @@
 import Head from 'next/head'
 import React from 'react'
 // import Link from 'next/link'
+import theme from '../src/theme'
 
 export default function Home() {
   return (
-    <div className="container">
+    <div className="container" backgroundColor={theme.palette.background}>
       <Head>
         <title>Paul Dill portfolio</title>
       </Head>
 
       <main>
-        <h1 className="title">
+        <h1 className="title" color={theme.palette.primary}>
         Aloha!  Welcome to my portfolio!
         </h1>
 
-        <p className="description">
+        <p className="description" color={theme.palette.secondary}>
           {/* Write intro here */}
           My name is Paul Dill.  I've been learning web development for the last year with my main focus on Front-end engineering so far.
           My goal is to hone my skills on the front end and begin work on back-end development.  This portfolio will be a way for 
@@ -25,7 +26,7 @@ export default function Home() {
           Feel free to contact me by email at paul@pdill.dev {/*Add link here*/}
         </p>
 
-        <div className="grid">
+        <div className="grid" color={theme.palette.warning}>
           <a href="https://mothercupboard.com" className="card">
             <h3>Mothercupboard</h3>
             <p>Meal Planner app that I'm building with a friend.</p>
