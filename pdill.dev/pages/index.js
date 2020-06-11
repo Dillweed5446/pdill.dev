@@ -3,6 +3,7 @@ import React from 'react'
 // import Link from 'next/link'
 import theme from '../src/theme'
 import { ThemeProvider } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
 
 export default function Home () {
   return (
@@ -13,11 +14,11 @@ export default function Home () {
       </Head>
 
       <main>
-        <h1 className="title" color="primary" >
+        <Typography variant="h1" color="primary" >
         Aloha!  Welcome to my portfolio!
-        </h1>
+        </Typography>
 
-        <p className="description" color="secondary">
+        <Typography variant="p" color="secondary">
           {/* Write intro here */}
           My name is Paul Dill.  I've been learning web development for the last year with my main focus on Front-end engineering so far.
           My goal is to hone my skills on the front end and begin work on back-end development.  This portfolio will be a way for 
@@ -26,7 +27,7 @@ export default function Home () {
           to be a generalist.  I hope to gain a deep understanding of programming, and work in this field for the rest of my career.  For fun, I enjoy padding Hawaiian outrigger canoes,
           spending time with my daughter, cooking, hiking, running, reading, listening to music and working in the garden.  Thank you for checking out my portfolio, I hope you enjoy my work.
           Feel free to contact me by email at paul@pdill.dev {/*Add link here*/}
-        </p>
+        </Typography>
 
         <div className="grid" color="warning">
           <a href="https://mothercupboard.com" className="card">
