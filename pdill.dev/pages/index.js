@@ -29,10 +29,10 @@ export default function Home () {
           Feel free to contact me by email at paul@pdill.dev {/*Add link here*/}
         </Typography>
 
-        <div className="grid" color="warning">
+        <div className="grid" >
           <a href="https://mothercupboard.com" className="card">
-            <h3>Mothercupboard</h3>
-            <p>Meal Planner app that I'm building with a friend.</p>
+            <Typography variant="h3" color="warning">Mothercupboard</Typography>
+            <Typography variant="p" color="secondary">Meal Planner app that I'm building with a friend.</Typography>
           </a>
         
 
