@@ -14,7 +14,7 @@ export default function Home () {
       </Head>
 
       <main>
-        <Typography variant="h1" color="primary" >
+        <Typography variant="h1" className="title" color="primary" >
         Aloha!  Welcome to my portfolio!
         </Typography>
 
