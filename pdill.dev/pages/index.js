@@ -73,7 +73,7 @@ export default function Home () {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GitHubIcon alt="Github Logo" className="logo" />
+          <GitHubIcon className="logo" />
         </a>
       </footer>
 
