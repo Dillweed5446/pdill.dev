@@ -60,14 +60,14 @@ export default function Home () {
       </main>
 
       <footer>
-        <Typography variant="h3" color="success">Additional Resources</Typography>
+        <Typography variant="h5" color="success">Additional Resources</Typography>
         <a
           href="https://github.com/Dillweed5446"
           alt="GitHub"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <GitHubIcon/>
+          <GitHubIcon alt="GitHub"/>
         </a>
       </footer>
 
