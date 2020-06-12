@@ -4,6 +4,7 @@ import React from 'react'
 import theme from '../src/theme'
 import { ThemeProvider } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
+import SvgIcon from '@material-ui/core/SvgIcon'
 import GitHubIcon from '@material-ui/icons/GitHub'
 
 export default function Home () {
@@ -72,7 +73,7 @@ export default function Home () {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={GitHubIcon} alt="Github Logo" className="logo" />
+          <SvgIcon titleAccess="GitHubIcon" alt="Github Logo" className="logo" />
         </a>
       </footer>
 
