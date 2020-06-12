@@ -4,7 +4,7 @@ import React from 'react'
 import theme from '../src/theme'
 import { ThemeProvider } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
-import { GitHubIcon } from '@material-ui/icons'
+import GitHubIcon from '@material-ui/icons/GitHub'
 
 export default function Home () {
   return (
