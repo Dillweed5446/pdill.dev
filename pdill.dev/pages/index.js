@@ -73,7 +73,7 @@ export default function Home () {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <SvgIcon titleAccess="GitHubIcon" alt="Github Logo" className="logo" />
+          <GitHubIcon alt="Github Logo" className="logo" />
         </a>
       </footer>
 
