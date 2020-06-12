@@ -1,5 +1,16 @@
 const setup = {
-    "presets": ["next/babel"],
+    "presets": [[
+        "next/babel",
+        {
+          "preset-env": {
+              "modules": 'false'
+          },
+          "transform-runtime": {},
+          "styled-jsx": {},
+          "class-properties": {}
+        }
+      ]
+    ],
     "plugins": [
             [
               'babel-plugin-import',
