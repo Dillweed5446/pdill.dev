@@ -4,6 +4,7 @@ import React from 'react'
 import theme from '../src/theme'
 import { ThemeProvider } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
+import { GitHubIcon } from '@material-ui/icons'
 
 export default function Home () {
   return (
@@ -57,16 +58,23 @@ export default function Home () {
         </div> */}
       </main>
 
-      {/*<footer>
+      <footer>
+        <Typography variant="h3" color="success">Additional Resources</Typography>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://github.com/Dillweed5446"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
+          <img src={GitHubIcon} alt="Github Logo" className="logo" />
         </a>
-      </footer> */}
+        <a
+          href="https://github.com/Dillweed5446"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={GitHubIcon} alt="Github Logo" className="logo" />
+        </a>
+      </footer>
 
       {/* <style jsx>{`
         .container {

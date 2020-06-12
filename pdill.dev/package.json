@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.10.1",
+    "@material-ui/icons": "^4.9.1",
     "harmony": "^1.5.1",
     "next": "9.4.4",
     "next-images": "^1.4.0",
@@ -33,18 +34,26 @@
   "settings": {
     "react": {
       "createClass": "createReactClass",
-      "pragma": "React", 
-      "version": "detect", 
-      "flowVersion": "0.53" 
+      "pragma": "React",
+      "version": "detect",
+      "flowVersion": "0.53"
     },
     "propWrapperFunctions": [
-        "forbidExtraProps",
-        {"property": "freeze", "object": "Object"},
-        {"property": "myFavoriteWrapper"}
+      "forbidExtraProps",
+      {
+        "property": "freeze",
+        "object": "Object"
+      },
+      {
+        "property": "myFavoriteWrapper"
+      }
     ],
     "linkComponents": [
       "Hyperlink",
-      {"name": "Link", "linkAttribute": "to"}
+      {
+        "name": "Link",
+        "linkAttribute": "to"
+      }
     ],
     "react-awesome-slider": "^4.1.0",
     "react-dom": "16.13.1",
