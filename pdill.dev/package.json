@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.10.1",
+    "@material-ui/icons": "^4.9.1",
     "harmony": "^1.5.1",
     "next": "9.4.4",
     "next-images": "^1.4.0",
@@ -16,6 +17,8 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "babel-plugin-import": "^1.13.0",
+    "customize-cra": "^1.0.0",
     "eslint": "^7.2.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.21.1",
@@ -23,7 +26,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "react-app-rewired": "^2.1.6"
   },
   "extends": [
     "eslint:recommended",
@@ -33,18 +37,26 @@
   "settings": {
     "react": {
       "createClass": "createReactClass",
-      "pragma": "React", 
-      "version": "detect", 
-      "flowVersion": "0.53" 
+      "pragma": "React",
+      "version": "detect",
+      "flowVersion": "0.53"
     },
     "propWrapperFunctions": [
-        "forbidExtraProps",
-        {"property": "freeze", "object": "Object"},
-        {"property": "myFavoriteWrapper"}
+      "forbidExtraProps",
+      {
+        "property": "freeze",
+        "object": "Object"
+      },
+      {
+        "property": "myFavoriteWrapper"
+      }
     ],
     "linkComponents": [
       "Hyperlink",
-      {"name": "Link", "linkAttribute": "to"}
+      {
+        "name": "Link",
+        "linkAttribute": "to"
+      }
     ],
     "react-awesome-slider": "^4.1.0",
     "react-dom": "16.13.1",
