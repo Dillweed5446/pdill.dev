@@ -63,17 +63,11 @@ export default function Home () {
         <Typography variant="h3" color="success">Additional Resources</Typography>
         <a
           href="https://github.com/Dillweed5446"
+          alt="GitHub"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src={GitHubIcon} alt="Github Logo" className="logo" />
-        </a>
-        <a
-          href="https://github.com/Dillweed5446"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <GitHubIcon className="logo" />
+          <GitHubIcon/>
         </a>
       </footer>
 
