@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { Children } from 'react'
 
-export default function BoxModel (props) {
+export default function BoxModel () {
   return (
     <div style={{
       width: "70%",
@@ -8,7 +8,7 @@ export default function BoxModel (props) {
       padding: "10%",
       margin: "0%"
     }} >
-      {props}
+      {Children}
     </div>
   )
 }
