@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography'
 export default function Home () {
   return (
     <ThemeProvider theme={theme}>
-    <div className="container"  style={{margin: "8em 8em"}}>
+    <div className="container"  style={{margin: "30%"}}>
       <Head>
         <title>Paul Dill portfolio</title>
       </Head>
