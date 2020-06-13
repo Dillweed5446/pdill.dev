@@ -23,7 +23,7 @@ const theme = createMuiTheme({
           backgroundImage: "url(" + `${require("../public/sunset-long.jpg")}` + ")",
           width: "100%",
           height:"640px",
-          backgroundRepeat: "no-repeat",
+          backgroundRepeat: "repeat-y",
           backgroundSize: "cover"
         }
       }
