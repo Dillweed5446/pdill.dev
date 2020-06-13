@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function BoxModel (props) {
+  const { Component, pageProps } = props
   return (
     <div style={{
       width: "70%",
@@ -8,7 +9,7 @@ export default function BoxModel (props) {
       padding: "10%",
       margin: "0%"
     }} >
-      {...props}
+      <Component {...pageProps} />
     </div>
   )
 }
