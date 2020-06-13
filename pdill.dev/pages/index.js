@@ -9,12 +9,12 @@ import Typography from '@material-ui/core/Typography'
 export default function Home () {
   return (
     <ThemeProvider theme={theme}>
-    <div className="container"  style={{margin: "30%"}}>
+    <div className="container" >
       <Head>
         <title>Paul Dill portfolio</title>
       </Head>
 
-      <main>
+      <main style={{margin: "30%"}}>
         <Typography variant="h1" className="title" color="primary" >
         Aloha!  Welcome to my portfolio!
         </Typography>
