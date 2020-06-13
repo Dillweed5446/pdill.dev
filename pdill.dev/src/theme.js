@@ -4,12 +4,14 @@ import { createMuiTheme } from '@material-ui/core/styles'
 const theme = createMuiTheme({
   overrides: {
     MuiCssBaseline: {
-      background: {
-        backgroundImage: '../public/ocean-sunset.jpg',
-        width: "100%",
-        height:"640px",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover"
+      '@global': {
+        body: {
+          backgroundImage: '../public/ocean-sunset.jpg',
+          width: "100%",
+          height:"640px",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover"
+        }
       }
     }
   },
