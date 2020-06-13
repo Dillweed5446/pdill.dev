@@ -8,7 +8,7 @@ export default function BoxModel (children) {
       padding: "10%",
       margin: "0%"
     }} >
-      {children}
+      [{children}]
     </div>
   )
 }
