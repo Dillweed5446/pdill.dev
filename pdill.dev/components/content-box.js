@@ -1,13 +1,15 @@
 import React from 'react'
+import theme from '../src/theme'
 
 export default function BoxModel ({children}) {
   return (
     <div style={{
-      height: "100%",
       width: "70%",
       border: "2em primary",
-      padding: "10%",
-      margin: "0%"
+      padding: "0%",
+      margin: "0%",
+      backgroundColor: "background.default",
+      boxSizing: 'content-box'
     }} >
       {children}
     </div>
