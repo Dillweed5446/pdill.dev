@@ -6,6 +6,7 @@ const theme = createMuiTheme({
     MuiCssBaseline: {
       '@global': {
         html: {
+          margin: "3em",
           backgroundImage: "url(" + `${require("../public/ocean-sunset.jpg")}` + ")",
           width: "100%",
           height:"640px",
