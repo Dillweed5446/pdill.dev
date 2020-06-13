@@ -10,6 +10,7 @@ const theme = createMuiTheme({
         height:"640px",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover"
+      }
     }
   },
   palette: {
