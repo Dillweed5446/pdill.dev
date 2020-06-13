@@ -18,7 +18,7 @@ const theme = createMuiTheme({
           height:"640px",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
-        }
+        },
         footer: {
           backgroundImage: "url(" + `${require("../public/ocean-sunset.jpg")}` + ")",
           width: "100%",
