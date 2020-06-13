@@ -5,7 +5,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../src/theme'
 import Footer from '../components/footer'
-import Sunset from '../public/ocean-sunset.jpg'
+// import Sunset from '../public/ocean-sunset.jpg'
 
 export default function MyApp (props) {
   const { Component, pageProps } = props
@@ -27,13 +27,7 @@ export default function MyApp (props) {
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <CssBaseline style={{
-          backgroundImage: { Sunset },
-          width: "100%",
-          height:"640px",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover"
-        }}/>
+        <CssBaseline />
         <Component {...pageProps} />
         <Footer />
       </ThemeProvider>
