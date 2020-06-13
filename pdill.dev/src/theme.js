@@ -2,6 +2,33 @@ import { createMuiTheme } from '@material-ui/core/styles'
 
 // Create a theme instance.
 const theme = createMuiTheme({
+  overrides: {
+    MuiCssBaseline: {
+      '@global': {
+        html: {
+          backgroundImage: "url(" + `${require("../public/ocean-sunset.jpg")}` + ")",
+          width: "100%",
+          height:"640px",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover"
+        },
+        body: {
+          backgroundImage: "url(" + `${require("../public/ocean-sunset.jpg")}` + ")",
+          width: "100%",
+          height:"640px",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover"
+        },
+        footer: {
+          backgroundImage: "url(" + `${require("../public/sunset-long.jpg")}` + ")",
+          width: "100%",
+          height:"640px",
+          backgroundRepeat: "repeat-y",
+          backgroundSize: "cover"
+        }
+      }
+    }
+  },
   palette: {
     primary: {
       main: '#143642'

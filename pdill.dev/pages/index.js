@@ -1,21 +1,18 @@
 import Head from 'next/head'
 import React from 'react'
 // import Link from 'next/link'
-import theme from '../src/theme'
-import { ThemeProvider } from '@material-ui/core/styles'
+
 import Typography from '@material-ui/core/Typography'
-// import Footer from '../components/footer'
 
 
 export default function Home () {
   return (
-    <ThemeProvider theme={theme}>
-    <div className="container" backgroundColor={theme.palette.background.default}>
+    <div className="container" >
       <Head>
         <title>Paul Dill portfolio</title>
       </Head>
 
-      <main>
+      <main style={{margin:"10%"}}>
         <Typography variant="h1" className="title" color="primary" >
         Aloha!  Welcome to my portfolio!
         </Typography>
@@ -59,7 +56,6 @@ export default function Home () {
         </div> */}
       </main>
 
-        {/* <Footer /> */}
 
       {/* <style jsx>{`
         .container {
@@ -207,6 +203,5 @@ export default function Home () {
         }
       `}</style> */}
     </div>
-    </ThemeProvider>
   )
 }
