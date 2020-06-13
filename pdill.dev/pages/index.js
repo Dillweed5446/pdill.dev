@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography'
 export default function Home () {
   return (
     <ThemeProvider theme={theme}>
-    <div className="container" {/*backgroundColor={theme.palette.background.default}*/}>
+    <div className="container">
       <Head>
         <title>Paul Dill portfolio</title>
       </Head>
