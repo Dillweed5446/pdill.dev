@@ -12,7 +12,7 @@ export default function Home () {
         <title>Paul Dill portfolio</title>
       </Head>
 
-      <main style={{margin="25%"}}>
+      <main style={{margin:"25%"}}>
         <Typography variant="h1" className="title" color="primary" >
         Aloha!  Welcome to my portfolio!
         </Typography>
