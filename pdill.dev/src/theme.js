@@ -1,5 +1,4 @@
 import { createMuiTheme } from '@material-ui/core/styles'
-import { Sunset } from '../public/ocean-sunset.jpg'
 
 // Create a theme instance.
 const theme = createMuiTheme({
@@ -7,7 +6,7 @@ const theme = createMuiTheme({
     MuiCssBaseline: {
       '@global': {
         html: {
-          backgroundImage: "Sunset",
+          backgroundImage: "url(" + `${require("../public/ocean-sunset.jpg")}` + ")",
           width: "100%",
           height:"640px",
           backgroundRepeat: "no-repeat",
