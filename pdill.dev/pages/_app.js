@@ -30,8 +30,8 @@ export default function MyApp (props) {
         <BoxModel>
           <CssBaseline />
           <Component {...pageProps} />
-          <Footer />
         </BoxModel>
+        <Footer />
       </ThemeProvider>
     </React.Fragment>
   )
