@@ -5,7 +5,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../src/theme'
 import Footer from '../components/footer'
-import BoxModel from '../components/content-box'
+// import BoxModel from '../components/content-box'
 
 export default function MyApp (props) {
   const { Component, pageProps } = props
@@ -27,11 +27,16 @@ export default function MyApp (props) {
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <BoxModel>
+        <div style={{
+      width: "70%",
+      border: "2em primary",
+      padding: "10%",
+      margin: "0%"
+    }} >
         <CssBaseline />
         <Component {...pageProps} />
         <Footer />
-        </BoxModel>
+        </div>
       </ThemeProvider>
     </React.Fragment>
   )
