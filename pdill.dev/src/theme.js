@@ -11,6 +11,13 @@ const theme = createMuiTheme({
           height:"640px",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
+        },
+        body: {
+          backgroundImage: "url(" + `${require("../public/ocean-sunset.jpg")}` + ")",
+          width: "100%",
+          height:"640px",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover"
         }
       }
     }
