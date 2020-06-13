@@ -20,7 +20,7 @@ const theme = createMuiTheme({
           backgroundSize: "cover"
         },
         footer: {
-          backgroundImage: "url(" + `${require("../public/ocean-sunset.jpg")}` + ")",
+          backgroundImage: "url(" + `${require("../public/sunset-long.jpg")}` + ")",
           width: "100%",
           height:"640px",
           backgroundRepeat: "no-repeat",
