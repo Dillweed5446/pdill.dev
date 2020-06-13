@@ -7,7 +7,7 @@ const theme = createMuiTheme({
     MuiCssBaseline: {
       '@global': {
         html: {
-          backgroundImage: { Sunset },
+          backgroundImage: "Sunset",
           width: "100%",
           height:"640px",
           backgroundRepeat: "no-repeat",
