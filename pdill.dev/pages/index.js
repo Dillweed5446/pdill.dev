@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import React from 'react'
 // import Link from 'next/link'
+
 import Typography from '@material-ui/core/Typography'
 
 
@@ -11,7 +12,7 @@ export default function Home () {
         <title>Paul Dill portfolio</title>
       </Head>
 
-      <main >
+      <main style={{margin="25%"}}>
         <Typography variant="h1" className="title" color="primary" >
         Aloha!  Welcome to my portfolio!
         </Typography>
