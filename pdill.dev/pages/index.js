@@ -4,7 +4,6 @@ import React from 'react'
 import theme from '../src/theme'
 import { ThemeProvider } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
-// import Footer from '../components/footer'
 
 
 export default function Home () {
@@ -59,7 +58,6 @@ export default function Home () {
         </div> */}
       </main>
 
-        {/* <Footer /> */}
 
       {/* <style jsx>{`
         .container {
