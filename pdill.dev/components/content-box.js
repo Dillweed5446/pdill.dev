@@ -7,7 +7,7 @@ export default function BoxModel ({children}) {
       width: '70%',
       border: '2em #20A4F3',
       padding: '0%',
-      margin: '0%',
+      margin: '8%',
       backgroundColor: '#DAD2D8',
       boxSizing: 'content-box'
     }} >
