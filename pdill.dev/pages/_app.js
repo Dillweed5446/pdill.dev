@@ -27,7 +27,7 @@ export default function MyApp (props) {
       </Head>
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-        <BoxModel>
+        <BoxModel >
           <CssBaseline />
           <Component {...pageProps} />
         </BoxModel>
