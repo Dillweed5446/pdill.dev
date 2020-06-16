@@ -6,7 +6,7 @@ import { FaStackOverflow, FaWordpress } from 'react-icons/fa'
 
 export default function Footer () {
   return (
-    <footer className="footer">
+    <footer className="footer" style={{backgroundColor: '#DAD2D8'}}>
       <Typography className="footer-heading" variant="h5" color="success">Additional Resources</Typography>
       <a
         className="icon"
@@ -47,15 +47,15 @@ export default function Footer () {
 
       <style jsx>{`
       .footer {
-        background-color: #DAD2D8;
       },
 
       .footer-heading {
-        padding: 3%;
+        margin: 3%;
 
       },
       .icon {
         margin: 3%;
+        font-size: 1.5rem;
       }
 
         `}</style>
