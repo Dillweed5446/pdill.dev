@@ -8,7 +8,7 @@ const theme = createMuiTheme({
         html: {
           backgroundImage: "url(" + `${require("../public/sunset-crop-3.jpg")}` + ")",
           width: "100%",
-          height:"5%",
+          height:"0%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
         },
@@ -22,7 +22,7 @@ const theme = createMuiTheme({
         footer: {
           backgroundImage: "url(" + `${require("../public/sunset-long.jpg")}` + ")",
           width: "100%",
-          height:"20%",
+          height:"25%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
         }
