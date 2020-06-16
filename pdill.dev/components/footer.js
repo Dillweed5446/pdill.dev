@@ -51,15 +51,15 @@ export default function Footer () {
 
   <style jsx>{`
   .footer {
-    background-color: '#DAD2D8'
+    background-color: #DAD2D8;
   },
 
   .footer-heading {
-    padding: '3%',
+    padding: 3%;
 
   },
   .icon {
-    margin: '3%'
+    margin: 3%;
   }
 
     `}</style>
