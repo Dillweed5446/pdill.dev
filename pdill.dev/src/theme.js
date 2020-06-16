@@ -22,7 +22,7 @@ const theme = createMuiTheme({
         footer: {
           backgroundImage: "url(" + `${require("../public/sunset-long.jpg")}` + ")",
           width: "100%",
-          height:"25%",
+          height:"30%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
         }
