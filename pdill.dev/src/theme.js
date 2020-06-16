@@ -8,14 +8,14 @@ const theme = createMuiTheme({
         html: {
           backgroundImage: "url(" + `${require("../public/sunset-crop-3.jpg")}` + ")",
           width: "100%",
-          height:"25%",
+          height:"0%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
         },
         body: {
           backgroundImage: "url(" + `${require("../public/sunset-crop-3.jpg")}` + ")",
           width: "100%",
-          height:"50%",
+          height:"75%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
         },
