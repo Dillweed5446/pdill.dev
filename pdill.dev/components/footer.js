@@ -50,11 +50,11 @@ export default function Footer () {
       },
 
       .footer-heading {
-        margin: 3%;
+        {/* margin: 3%; */}
 
       },
       .icon {
-        margin: 3%;
+        {/* margin: 3%; */}
         font-size: 1.5rem;
       }
 
