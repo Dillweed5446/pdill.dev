@@ -3,7 +3,6 @@ import Typography from '@material-ui/core/Typography'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import { FaStackOverflow, FaWordpress } from 'react-icons/fa'
-import { withStyles } from '@material-ui/core'
 
 export default function Footer () {
   return (
@@ -45,21 +44,22 @@ export default function Footer () {
       >
         <FaWordpress title="WordPress.com"/>
       </a>
+
+      <style jsx>{`
+      .footer {
+        background-color: #DAD2D8;
+      },
+
+      .footer-heading {
+        padding: 3%;
+
+      },
+      .icon {
+        margin: 3%;
+      }
+
+        `}</style>
     </footer>
+
   )
 }
-
-  <style jsx>{`
-  .footer {
-    background-color: #DAD2D8;
-  },
-
-  .footer-heading {
-    padding: 3%;
-
-  },
-  .icon {
-    margin: 3%;
-  }
-
-    `}</style>
