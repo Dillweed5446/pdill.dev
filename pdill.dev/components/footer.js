@@ -7,7 +7,7 @@ import { FaStackOverflow, FaWordpress } from 'react-icons/fa'
 export default function Footer () {
   return (
     <footer className="footer">
-      <Typography className="footer-heading" variant="h5" color="success">Additional Resources</Typography>
+      <Typography className="footer-heading" variant="h5" color="#20A4F3">Additional Resources</Typography>
       <a
         className="icon"
         href="https://github.com/Dillweed5446"
@@ -51,6 +51,7 @@ export default function Footer () {
 
       .footer-heading {
         padding: 3%;
+        padding-bottom: 2%;
       },
       .icon {
         padding: 3%;
