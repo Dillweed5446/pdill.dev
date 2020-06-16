@@ -8,21 +8,21 @@ const theme = createMuiTheme({
         html: {
           backgroundImage: "url(" + `${require("../public/sunset-crop-3.jpg")}` + ")",
           width: "100%",
-          height:"640px",
+          height:"25%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
         },
         body: {
           backgroundImage: "url(" + `${require("../public/sunset-crop-3.jpg")}` + ")",
           width: "100%",
-          height:"640px",
+          height:"50%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
         },
         footer: {
           backgroundImage: "url(" + `${require("../public/sunset-long.jpg")}` + ")",
           width: "100%",
-          height:"640px",
+          height:"25%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
         }
