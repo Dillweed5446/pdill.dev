@@ -51,6 +51,9 @@ const theme = createMuiTheme({
     success: {
       main: '#20A4F3'
     }
+  },
+  typography: {
+    paddingBottom: '2%'
   }
 })
 
