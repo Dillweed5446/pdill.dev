@@ -27,6 +27,11 @@ const theme = createMuiTheme({
           backgroundSize: "cover"
         }
       }
+    },
+    MuiTypography: {
+      root: {
+        paddingBottom: '2%'
+      }
     }
   },
   palette: {
@@ -52,6 +57,7 @@ const theme = createMuiTheme({
       main: '#20A4F3'
     }
   }
-})
+}
+)
 
 export default theme

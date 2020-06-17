@@ -14,16 +14,16 @@ export default function Home () {
 
       <main>
         <BoxModel>
-          <Typography variant="h1" className="title" color="primary" >
+          <Typography variant="h1" className="title" color="primary">
             Aloha!  Welcome to my portfolio!
           </Typography>
 
           <Typography variant="p" color="secondary">
             {/* Write intro here */}
-          My name is Paul Dill.  I've been learning web development for the last year with my main focus on Front-end engineering so far.
-          My goal is to hone my skills on the front end and begin work on back-end development.  This portfolio will be a way for 
+          My name is Paul Dill.  I&apos;ve been learning web development for the last year with my main focus on Front-end engineering so far.
+          My goal is to hone my skills on the front end and begin work on back-end development.  This portfolio will be a way for
           me to experiment, build projects, learn, and generally give me a place to show my work.  Currently, I am self-employed as a gardener,
-          but I'm starting to look for web development jobs so that I can transition my career.  I have worn many hats in life thus far, and consider myself
+          but I&apos;m starting to look for web development jobs so that I can transition my career.  I have worn many hats in life thus far, and consider myself
           to be a generalist.  I hope to gain a deep understanding of programming, and work in this field for the rest of my career.  For fun, I enjoy padding Hawaiian outrigger canoes,
           spending time with my daughter, cooking, hiking, running, reading, listening to music and working in the garden.  Thank you for checking out my portfolio, I hope you enjoy my work.
           Feel free to contact me by email at paul@pdill.dev {/*Add link here*/}
