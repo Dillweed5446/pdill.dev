@@ -28,9 +28,7 @@ const theme = createMuiTheme({
         }
       },
       '.MuiTypography-root': {
-        MuiTypography: {
-          paddingBottom: '2%'
-        }
+        paddingBottom: '2%'
       }
     }
   },
