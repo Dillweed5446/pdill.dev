@@ -14,11 +14,11 @@ export default function Home () {
 
       <main>
         <BoxModel>
-          <Typography variant="h1" className="title" color="primary" pb={2} >
+          <Typography variant="h1" className="title" color="primary">
             Aloha!  Welcome to my portfolio!
           </Typography>
 
-          <Typography variant="p" color="secondary" pb={2}>
+          <Typography variant="p" color="secondary">
             {/* Write intro here */}
           My name is Paul Dill.  I&apos;ve been learning web development for the last year with my main focus on Front-end engineering so far.
           My goal is to hone my skills on the front end and begin work on back-end development.  This portfolio will be a way for
@@ -31,7 +31,7 @@ export default function Home () {
 
           <div className="grid" >
             <a href="https://mothercupboard.com" className="card">
-              <Typography variant="h3" color="warning" pb={2}>Mothercupboard</Typography>
+              <Typography variant="h3" color="warning">Mothercupboard</Typography>
               <Typography variant="p" color="secondary">Meal Planner app that I'm building with a friend.</Typography>
             </a>
 

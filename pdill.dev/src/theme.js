@@ -25,6 +25,9 @@ const theme = createMuiTheme({
           height:"25%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
+        },
+        typography: {
+          paddingBottom: '2%'
         }
       }
     }
@@ -51,8 +54,7 @@ const theme = createMuiTheme({
     success: {
       main: '#20A4F3'
     }
-  },
-  spacing: '8'
+  }
 }
 )
 
