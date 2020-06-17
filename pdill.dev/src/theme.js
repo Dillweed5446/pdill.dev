@@ -53,8 +53,11 @@ const theme = createMuiTheme({
     }
   },
   typography: {
-    paddingBottom: '2%'
+    root: {
+      paddingBottom: '2%'
+    }
   }
-})
+}
+)
 
 export default theme
