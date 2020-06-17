@@ -26,10 +26,12 @@ const theme = createMuiTheme({
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
         }
+      },
+      '.MuiTypography-root': {
+        MuiTypography: {
+          paddingBottom: '2%'
+        }
       }
-    },
-    typography: {
-      paddingBottom: '2%'
     }
   },
   palette: {
