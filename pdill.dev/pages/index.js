@@ -31,18 +31,15 @@ export default function Home () {
           </Typography>
 
           <Grid
-            container
+            item xs
             direction="column"
             justify="center"
             alignItems="stretch"
-            item="xs"
           >
-            <div className="grid" >
-              <a href="https://mothercupboard.com" className="card">
-                <Typography variant="h3" color="warning">Mothercupboard</Typography>
-                <Typography variant="p" color="secondary">Meal Planner app that I&apos;m building with a friend.</Typography>
-              </a>
-            </div>
+            <a href="https://mothercupboard.com" className="card">
+              <Typography variant="h3" color="warning">Mothercupboard</Typography>
+              <Typography variant="p" color="secondary">Meal Planner app that I&apos;m building with a friend.</Typography>
+            </a>
           </Grid>
         </BoxModel>
         {/*  <a
