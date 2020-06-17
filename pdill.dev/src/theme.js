@@ -25,11 +25,11 @@ const theme = createMuiTheme({
           height:"25%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
-        },
-        typography: {
-          paddingBottom: '2%'
         }
       }
+    },
+    typography: {
+      paddingBottom: '2%'
     }
   },
   palette: {
