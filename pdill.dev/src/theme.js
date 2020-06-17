@@ -6,21 +6,21 @@ const theme = createMuiTheme({
     MuiCssBaseline: {
       '@global': {
         html: {
-          backgroundImage: "url(" + `${require("../public/sunset-crop-3.jpg")}` + ")",
+          backgroundImage: "url(" + `${require("../public/sunset-crop-4.jpg")}` + ")",
           width: "100%",
           height:"0%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
         },
         body: {
-          backgroundImage: "url(" + `${require("../public/sunset-crop-3.jpg")}` + ")",
+          backgroundImage: "url(" + `${require("../public/sunset-crop-4.jpg")}` + ")",
           width: "100%",
           height:"75%",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover"
         },
         footer: {
-          backgroundImage: "url(" + `${require("../public/sunset-long.jpg")}` + ")",
+          backgroundImage: "url(" + `${require("../public/sunset-crop-4.jpg")}` + ")",
           width: "100%",
           height:"25%",
           backgroundRepeat: "no-repeat",
