@@ -52,11 +52,7 @@ const theme = createMuiTheme({
       main: '#20A4F3'
     }
   },
-  typography: {
-    root: {
-      paddingBottom: '2%'
-    }
-  }
+  spacing: '8'
 }
 )
 
