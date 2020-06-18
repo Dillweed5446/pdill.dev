@@ -38,7 +38,8 @@ const theme = createMuiTheme({
         backgroundColor: 'darkGrey',
         padding: 'inherit',
         border: '.5em #20A4F3 double',
-        borderRadius: '.1em'
+        borderRadius: '.1em',
+        textAlign: 'center'
       }
     }
   },
