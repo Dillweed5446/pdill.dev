@@ -55,7 +55,7 @@ export default function Footer () {
       },
       .icon {
         padding: 3%;
-        font-size: 1.5rem;
+        font-size: 3rem;
       }
 
         `}</style>
