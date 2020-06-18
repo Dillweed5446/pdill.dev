@@ -3,6 +3,7 @@ import React from 'react'
 // import Link from 'next/link'
 import BoxModel from '../components/content-box'
 import Typography from '@material-ui/core/Typography'
+import Grid from '@material-ui/core/Grid'
 
 
 export default function Home () {
@@ -29,13 +30,18 @@ export default function Home () {
           Feel free to contact me by email at paul@pdill.dev {/*Add link here*/}
           </Typography>
 
-          <div className="grid" >
+          <Grid
+            item xs
+            direction="column"
+            justify="center"
+            alignItems="stretch"
+            backgroundColor="background.default.dark"
+          >
             <a href="https://mothercupboard.com" className="card">
               <Typography variant="h3" color="warning">Mothercupboard</Typography>
-              <Typography variant="p" color="secondary">Meal Planner app that I'm building with a friend.</Typography>
+              <Typography variant="p" color="secondary">Meal Planner app that I&apos;m building with a friend.</Typography>
             </a>
-
-          </div>
+          </Grid>
         </BoxModel>
         {/*  <a
             href="https://github.com/vercel/next.js/tree/master/examples"

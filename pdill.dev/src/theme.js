@@ -32,6 +32,15 @@ const theme = createMuiTheme({
       root: {
         paddingBottom: '2%'
       }
+    },
+    MuiGrid: {
+      item: {
+        backgroundColor: 'darkGrey',
+        padding: '1%',
+        border: '.5em #20A4F3 double',
+        borderRadius: '.1em',
+        textAlign: 'center'
+      }
     }
   },
   palette: {
