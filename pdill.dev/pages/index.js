@@ -19,7 +19,7 @@ export default function Home () {
             Aloha!  Welcome to my portfolio!
           </Typography>
 
-          <Typography variant="p" color="secondary" style={{ paddingBottom: '2%' }}>
+          <Typography variant="p" color="secondary">
             {/* Write intro here */}
           My name is Paul Dill.  I&apos;ve been learning web development for the last year with my main focus on Front-end engineering so far.
           My goal is to hone my skills on the front end and begin work on back-end development.  This portfolio will be a way for
