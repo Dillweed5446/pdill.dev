@@ -31,7 +31,7 @@ export default function Home () {
           Feel free to contact me by email at paul@pdill.dev {/*Add link here*/}
           </Typography>
 
-          <div style={{ display: 'inline-block', marginBottom: '4%' }}>
+          <div style={{ display: 'inline-block', margin: '4%' }}>
             <div style={{ float: 'left' }}>
               <Typography variant="h2" color="primary" style={{ fontSize: '3rem' }}>Tech Stack</Typography>
               <Typography variant="p" color="secondary">
