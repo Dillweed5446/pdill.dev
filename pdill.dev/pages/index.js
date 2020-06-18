@@ -31,52 +31,57 @@ export default function Home () {
           Feel free to contact me by email at paul@pdill.dev {/*Add link here*/}
           </Typography>
 
-          <Typography variant="h2" color="warning">Tech Stack</Typography>
-          <Typography variant="p" color="secondary">
-            <List>
-              <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>React Native</li>
-                <li>Redux</li>
-                <li>Next.js</li>
-                <li>Material-UI</li>
-                <li>React-Native-Paper</li>
-                <li>Vercel</li>
-                <li>NPM</li>
-                <li>Git</li>
-                <li>GitBash</li>
-                <li>Visual Studio Code</li>
-                <li>Slack</li>
-                <li>Windows</li>
-              </ul>
-            </List>
-          </Typography>
+          <div style={{ display: 'inlineBlock' }}>
+            <div style={{ textAlign: 'left' }}>
+              <Typography variant="h2" color="primary">Tech Stack</Typography>
+              <Typography variant="p" color="secondary">
+                <List>
+                  <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>React Native</li>
+                    <li>Redux</li>
+                    <li>Next.js</li>
+                    <li>Material-UI</li>
+                    <li>React-Native-Paper</li>
+                    <li>Vercel</li>
+                    <li>NPM</li>
+                    <li>Git</li>
+                    <li>GitBash</li>
+                    <li>Visual Studio Code</li>
+                    <li>Slack</li>
+                    <li>Windows</li>
+                  </ul>
+                </List>
+              </Typography>
+            </div>
 
-          <Typography variant="h2" color="warning">Educational Resources</Typography>
-          <Typography variant="p" color="secondary">
-            <List>
-              <ul>
-                <li>StackOverflow</li>
-                <li>Mozilla Developers Network</li>
-                <li>GitHub</li>
-                <li>CSS Tricks</li>
-                <li>Codrops</li>
-                <li>W3C</li>
-                <li>Medium</li>
-                <li>Codecademy</li>
-                <li>LinkedIn Learning</li>
-                <li>Hackernews</li>
-                <li>Hackernoon</li>
-                <li>Egghead.io</li>
-                <li>Tech specific documentation (React, Redux, Next.js, Material-UI, etc</li>
-              </ul>
-            </List>
-          </Typography>
-
-          <Typography variant="h3" color="warning">Projects</Typography>
+            <div style={{ textAlign: 'right' }}>
+              <Typography variant="h2" color="primary">Educational Resources</Typography>
+              <Typography variant="p" color="secondary">
+                <List>
+                  <ul>
+                    <li>StackOverflow</li>
+                    <li>Mozilla Developers Network</li>
+                    <li>GitHub</li>
+                    <li>CSS Tricks</li>
+                    <li>Codrops</li>
+                    <li>W3C</li>
+                    <li>Medium</li>
+                    <li>Codecademy</li>
+                    <li>LinkedIn Learning</li>
+                    <li>Hackernews</li>
+                    <li>Hackernoon</li>
+                    <li>Egghead.io</li>
+                    <li>Tech specific documentation (React, Redux, Next.js, Material-UI, etc</li>
+                  </ul>
+                </List>
+              </Typography>
+            </div>
+          </div>
+          <Typography variant="h2" color="primary">Projects</Typography>
           <Grid
             item xs
             direction="column"
