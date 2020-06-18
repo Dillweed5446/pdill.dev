@@ -35,6 +35,7 @@ export default function Home () {
             direction="column"
             justify="center"
             alignItems="stretch"
+            backgroundColor="background.default.dark"
           >
             <a href="https://mothercupboard.com" className="card">
               <Typography variant="h3" color="warning">Mothercupboard</Typography>

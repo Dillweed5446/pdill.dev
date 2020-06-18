@@ -31,6 +31,14 @@ const theme = createMuiTheme({
     MuiTypography: {
       root: {
         paddingBottom: '2%'
+      },
+      MuiGrid: {
+        item: {
+          backgroundColor: 'darkGrey',
+          padding: 'inherit',
+          border: '.5em #20A4F3 double',
+          borderRadius: '.1em'
+        }
       }
     }
   },
