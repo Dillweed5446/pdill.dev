@@ -31,8 +31,8 @@ export default function Home () {
           Feel free to contact me by email at paul@pdill.dev {/*Add link here*/}
           </Typography>
 
-          <div style={{ display: 'inlineBlock' }}>
-            <div style={{ textAlign: 'left' }}>
+          <div style={{ display: 'inline-block', marginBottom: '4%' }}>
+            <div style={{ float: 'left' }}>
               <Typography variant="h2" color="primary">Tech Stack</Typography>
               <Typography variant="p" color="secondary">
                 <List>
@@ -58,7 +58,7 @@ export default function Home () {
               </Typography>
             </div>
 
-            <div style={{ textAlign: 'right' }}>
+            <div style={{ float: 'right', marginLeft: '10rem' }}>
               <Typography variant="h2" color="primary">Educational Resources</Typography>
               <Typography variant="p" color="secondary">
                 <List>
@@ -81,6 +81,7 @@ export default function Home () {
               </Typography>
             </div>
           </div>
+
           <Typography variant="h2" color="primary">Projects</Typography>
           <Grid
             item xs
