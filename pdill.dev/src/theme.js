@@ -26,6 +26,27 @@ let theme = createMuiTheme({
           backgroundRepeat: "repeat",
           backgroundSize: "cover"
         }
+      },
+      '@media (min-width: 1280px)': {
+        MuiTypography: {
+          h2: {
+            fontSize: '3rem'
+          }
+        }
+      },
+      '@media (min-width: 960px)': {
+        MuiTypography: {
+          h2: {
+            fontSize: '2.5rem'
+          }
+        }
+      },
+      '@media (min-width: 600px)': {
+        MuiTypography: {
+          h2: {
+            fontSize: '2rem'
+          }
+        }
       }
     },
     MuiTypography: {
