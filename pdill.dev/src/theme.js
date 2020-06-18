@@ -28,27 +28,6 @@ let theme = createMuiTheme({
         }
       }
     },
-    '@media (min-width: 1280px)': {
-      MuiTypography: {
-        h2: {
-          fontSize: '3rem'
-        }
-      }
-    },
-    '@media (min-width: 960px)': {
-      MuiTypography: {
-        h2: {
-          fontSize: '2.5rem'
-        }
-      }
-    },
-    '@media (min-width: 600px)': {
-      MuiTypography: {
-        h2: {
-          fontSize: '2rem'
-        }
-      }
-    },
     MuiTypography: {
       root: {
         paddingBottom: '2%'
@@ -94,6 +73,16 @@ let theme = createMuiTheme({
   }
 }
 )
+
+theme.typography.h2 = {
+  fontSize: '3rem',
+  '@media (min-width:900px)': {
+    fontSize: '2.5rem'
+  },
+  '@media (min-width: 600px)': {
+    fontSize: '2rem'
+  }
+}
 
 theme = responsiveFontSizes(theme)
 
