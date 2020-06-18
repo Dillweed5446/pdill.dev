@@ -1,7 +1,7 @@
-import { createMuiTheme } from '@material-ui/core/styles'
+import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
 
 // Create a theme instance.
-const theme = createMuiTheme({
+let theme = createMuiTheme({
   overrides: {
     MuiCssBaseline: {
       '@global': {
@@ -9,21 +9,21 @@ const theme = createMuiTheme({
           backgroundImage: "url(" + `${require("../public/sunset-crop-4.jpg")}` + ")",
           width: "100%",
           height:"0%",
-          backgroundRepeat: "no-repeat",
+          backgroundRepeat: "repeat",
           backgroundSize: "cover"
         },
         body: {
           backgroundImage: "url(" + `${require("../public/sunset-crop-4.jpg")}` + ")",
           width: "100%",
           height:"75%",
-          backgroundRepeat: "no-repeat",
+          backgroundRepeat: "repeat",
           backgroundSize: "cover"
         },
         footer: {
           backgroundImage: "url(" + `${require("../public/sunset-crop-4.jpg")}` + ")",
           width: "100%",
           height:"25%",
-          backgroundRepeat: "no-repeat",
+          backgroundRepeat: "repeat",
           backgroundSize: "cover"
         }
       }
@@ -68,5 +68,7 @@ const theme = createMuiTheme({
   }
 }
 )
+
+theme = responsiveFontSizes(theme)
 
 export default theme
