@@ -38,7 +38,7 @@ let theme = createMuiTheme({
         backgroundColor: 'darkGrey',
         padding: '1%',
         border: '.5em #20A4F3 double',
-        borderRadius: '.2em',
+        borderRadius: '1em',
         textAlign: 'center'
       }
     },
