@@ -33,7 +33,7 @@ export default function Home () {
 
           <div style={{ display: 'inline-block', marginBottom: '4%' }}>
             <div style={{ float: 'left' }}>
-              <Typography variant="h2" color="primary">Tech Stack</Typography>
+              <Typography variant="h2" color="primary" style={{ fontSize: '3rem' }}>Tech Stack</Typography>
               <Typography variant="p" color="secondary">
                 <List>
                   <ul>
@@ -59,7 +59,7 @@ export default function Home () {
             </div>
 
             <div style={{ float: 'right', marginLeft: '10rem' }}>
-              <Typography variant="h2" color="primary">Educational Resources</Typography>
+              <Typography variant="h2" color="primary" style={{ fontSize: '3rem' }}>Educational Resources</Typography>
               <Typography variant="p" color="secondary">
                 <List>
                   <ul>
