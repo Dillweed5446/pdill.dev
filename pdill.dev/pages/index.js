@@ -4,6 +4,7 @@ import React from 'react'
 import BoxModel from '../components/content-box'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
+import List from '@material-ui/core/List'
 
 
 export default function Home () {
@@ -30,6 +31,58 @@ export default function Home () {
           Feel free to contact me by email at paul@pdill.dev {/*Add link here*/}
           </Typography>
 
+          <div style={{ display: 'inline-block', margin: '4%' }}>
+            <div style={{ float: 'left' }}>
+              <Typography variant="h2" color="primary" style={{ fontSize: '3rem' }}>Tech Stack</Typography>
+              <Typography variant="p" color="secondary">
+                <List>
+                  <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>React Native</li>
+                    <li>Redux</li>
+                    <li>Next.js</li>
+                    <li>Material-UI</li>
+                    <li>React-Native-Paper</li>
+                    <li>Vercel</li>
+                    <li>NPM</li>
+                    <li>Git</li>
+                    <li>GitBash</li>
+                    <li>Visual Studio Code</li>
+                    <li>Slack</li>
+                    <li>Windows</li>
+                  </ul>
+                </List>
+              </Typography>
+            </div>
+
+            <div style={{ float: 'right', marginLeft: '10rem' }}>
+              <Typography variant="h2" color="primary" style={{ fontSize: '3rem' }}>Educational Resources</Typography>
+              <Typography variant="p" color="secondary">
+                <List>
+                  <ul>
+                    <li>StackOverflow</li>
+                    <li>Mozilla Developers Network</li>
+                    <li>GitHub</li>
+                    <li>CSS Tricks</li>
+                    <li>Codrops</li>
+                    <li>W3C</li>
+                    <li>Medium</li>
+                    <li>Codecademy</li>
+                    <li>LinkedIn Learning</li>
+                    <li>Hackernews</li>
+                    <li>Hackernoon</li>
+                    <li>Egghead.io</li>
+                    <li>Tech specific documentation (React, Redux, Next.js, Material-UI, etc</li>
+                  </ul>
+                </List>
+              </Typography>
+            </div>
+          </div>
+
+          <Typography variant="h2" color="primary">Projects</Typography>
           <Grid
             item xs
             direction="column"
