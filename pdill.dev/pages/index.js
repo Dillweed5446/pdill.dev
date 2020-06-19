@@ -60,7 +60,7 @@ export default function Home () {
 
             <div style={{ float: 'right'}}>
               <Typography variant="h2" color="primary">Educational<br/> Resources</Typography>
-              <Typography variant="p" color="secondary">
+              <Typography variant="body1" color="secondary">
                 <List>
                   <ul>
                     <li>StackOverflow</li>
@@ -88,11 +88,10 @@ export default function Home () {
             direction="column"
             justify="center"
             alignItems="stretch"
-            backgroundColor="background.default.dark"
           >
             <a href="https://mothercupboard.com" className="card">
-              <Typography variant="h3" color="warning">Mothercupboard</Typography>
-              <Typography variant="p" color="secondary">Meal Planner app that I&apos;m building with a friend.</Typography>
+              <Typography variant="h3" >Mothercupboard</Typography>
+              <Typography variant="body2" color="secondary">Meal Planner app that I&apos;m building with a friend.</Typography>
             </a>
           </Grid>
         </BoxModel>

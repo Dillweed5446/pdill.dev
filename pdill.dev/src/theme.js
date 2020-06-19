@@ -74,12 +74,14 @@ let theme = createMuiTheme({
 }
 )
 
-theme.typography.h3 = {
-  '@media (min-width:375px)': {
-    fontSize: '1.5rem'
+const breakpoints = {
+  [theme.breakpoints.down('sm')]: {
+    h3: {
+      fontSize: '1.5rem'
+    }
   }
 }
 
-theme = responsiveFontSizes(theme)
+theme = responsiveFontSizes(theme, breakpoints)
 
 export default theme
