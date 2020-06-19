@@ -31,9 +31,9 @@ export default function Home () {
           Feel free to contact me by email at paul@pdill.dev {/*Add link here*/}
           </Typography>
 
-          <div style={{ display: 'inline-block', margin: '4%' }}>
+          <div style={{ display: 'flow-root', margin: '4%' }}>
             <div style={{ float: 'left' }}>
-              <Typography variant="h2" color="primary" style={{ fontSize: '3rem' }}>Tech Stack</Typography>
+              <Typography variant="h2" color="primary">Tech Stack</Typography>
               <Typography variant="p" color="secondary">
                 <List>
                   <ul>
@@ -58,9 +58,9 @@ export default function Home () {
               </Typography>
             </div>
 
-            <div style={{ float: 'right', marginLeft: '10rem' }}>
-              <Typography variant="h2" color="primary" style={{ fontSize: '3rem' }}>Educational Resources</Typography>
-              <Typography variant="p" color="secondary">
+            <div style={{ float: 'right'}}>
+              <Typography variant="h2" color="primary">Educational<br/> Resources</Typography>
+              <Typography variant="body1" color="secondary">
                 <List>
                   <ul>
                     <li>StackOverflow</li>
@@ -75,7 +75,7 @@ export default function Home () {
                     <li>Hackernews</li>
                     <li>Hackernoon</li>
                     <li>Egghead.io</li>
-                    <li>Tech specific documentation (React, Redux, Next.js, Material-UI, etc</li>
+                    <li>Tech specific documentation</li>
                   </ul>
                 </List>
               </Typography>
@@ -88,11 +88,10 @@ export default function Home () {
             direction="column"
             justify="center"
             alignItems="stretch"
-            backgroundColor="background.default.dark"
           >
             <a href="https://mothercupboard.com" className="card">
-              <Typography variant="h3" color="warning">Mothercupboard</Typography>
-              <Typography variant="p" color="secondary">Meal Planner app that I&apos;m building with a friend.</Typography>
+              <Typography variant="h4">Mothercupboard</Typography>
+              <Typography variant="body1" color="secondary">Meal Planner app that I&apos;m building with a friend.</Typography>
             </a>
           </Grid>
         </BoxModel>
