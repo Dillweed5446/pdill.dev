@@ -31,9 +31,9 @@ export default function Home () {
           Feel free to contact me by email at paul@pdill.dev {/*Add link here*/}
           </Typography>
 
-          <div style={{ display: 'inline-block', margin: '4%' }}>
+          <div style={{ display: 'flow-root', margin: '4%' }}>
             <div style={{ float: 'left' }}>
-              <Typography variant="h2" color="primary" style={{ fontSize: '3rem' }}>Tech Stack</Typography>
+              <Typography variant="h2" color="primary">Tech Stack</Typography>
               <Typography variant="p" color="secondary">
                 <List>
                   <ul>
@@ -58,8 +58,8 @@ export default function Home () {
               </Typography>
             </div>
 
-            <div style={{ float: 'right', marginLeft: '8rem' }}>
-              <Typography variant="h2" color="primary" style={{ fontSize: '3rem' }}>Educational<br/> Resources</Typography>
+            <div style={{ float: 'right'}}>
+              <Typography variant="h2" color="primary">Educational<br/> Resources</Typography>
               <Typography variant="p" color="secondary">
                 <List>
                   <ul>
