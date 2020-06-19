@@ -58,8 +58,8 @@ export default function Home () {
               </Typography>
             </div>
 
-            <div style={{ float: 'right', marginLeft: '10rem' }}>
-              <Typography variant="h2" color="primary" style={{ fontSize: '3rem' }}>Educational Resources</Typography>
+            <div style={{ float: 'right', marginLeft: '8rem' }}>
+              <Typography variant="h2" color="primary" style={{ fontSize: '3rem' }}>Educational<br/> Resources</Typography>
               <Typography variant="p" color="secondary">
                 <List>
                   <ul>
@@ -75,7 +75,7 @@ export default function Home () {
                     <li>Hackernews</li>
                     <li>Hackernoon</li>
                     <li>Egghead.io</li>
-                    <li>Tech specific documentation (React, Redux, Next.js, Material-UI, etc</li>
+                    <li>Tech specific documentation</li>
                   </ul>
                 </List>
               </Typography>
