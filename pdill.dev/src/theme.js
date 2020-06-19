@@ -74,14 +74,6 @@ let theme = createMuiTheme({
 }
 )
 
-const breakpoints = {
-  [theme.breakpoints.down('sm')]: {
-    h3: {
-      fontSize: '1.5rem'
-    }
-  }
-}
-
-theme = responsiveFontSizes(theme, breakpoints)
+theme = responsiveFontSizes(theme)
 
 export default theme

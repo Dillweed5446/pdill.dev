@@ -90,8 +90,8 @@ export default function Home () {
             alignItems="stretch"
           >
             <a href="https://mothercupboard.com" className="card">
-              <Typography variant="h3" >Mothercupboard</Typography>
-              <Typography variant="body2" color="secondary">Meal Planner app that I&apos;m building with a friend.</Typography>
+              <Typography variant="h4">Mothercupboard</Typography>
+              <Typography variant="body1" color="secondary">Meal Planner app that I&apos;m building with a friend.</Typography>
             </a>
           </Grid>
         </BoxModel>
