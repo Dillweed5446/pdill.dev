@@ -74,6 +74,12 @@ let theme = createMuiTheme({
 }
 )
 
+theme.typography.h3 = {
+  '@media (min-width:375px)': {
+    fontSize: '1.5rem'
+  }
+}
+
 theme = responsiveFontSizes(theme)
 
 export default theme
