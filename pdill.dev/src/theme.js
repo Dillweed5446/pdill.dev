@@ -1,27 +1,29 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
 import { withImages } from '../next.config'
 
+const sunset = withImages(require('../public/sunset-crop-4.jpg'))
+
 // Create a theme instance.
 let theme = createMuiTheme({
   overrides: {
     MuiCssBaseline: {
       '@global': {
         html: {
-          backgroundImage: "url(" + `${require(withImages('../public/sunset-crop-4.jpg'))}` + ")",
+          backgroundImage: "url(" + `${sunset}` + ")",
           width: "100%",
           height:"0%",
           backgroundRepeat: "repeat",
           backgroundSize: "cover"
         },
         body: {
-          backgroundImage: "url(" + `${require(withImages('../public/sunset-crop-4.jpg'))}` + ")",
+          backgroundImage: "url(" + `${sunset}` + ")",
           width: "100%",
           height:"75%",
           backgroundRepeat: "repeat",
           backgroundSize: "cover"
         },
         footer: {
-          backgroundImage: "url(" + `${require(withImages('../public/sunset-crop-4.jpg'))}` + ")",
+          backgroundImage: "url(" + `${sunset}` + ")",
           width: "100%",
           height:"25%",
           backgroundRepeat: "repeat",
