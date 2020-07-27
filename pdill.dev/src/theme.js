@@ -1,4 +1,5 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
+import { withImages } from '../next.config'
 
 // Create a theme instance.
 let theme = createMuiTheme({
@@ -6,21 +7,21 @@ let theme = createMuiTheme({
     MuiCssBaseline: {
       '@global': {
         html: {
-          backgroundImage: "url(" + `${require("../public/sunset-crop-4.jpg")}` + ")",
+          backgroundImage: "url(" + `${require(withImages('../public/sunset-crop-4.jpg'))}` + ")",
           width: "100%",
           height:"0%",
           backgroundRepeat: "repeat",
           backgroundSize: "cover"
         },
         body: {
-          backgroundImage: "url(" + `${require("../public/sunset-crop-4.jpg")}` + ")",
+          backgroundImage: "url(" + `${require(withImages('../public/sunset-crop-4.jpg'))}` + ")",
           width: "100%",
           height:"75%",
           backgroundRepeat: "repeat",
           backgroundSize: "cover"
         },
         footer: {
-          backgroundImage: "url(" + `${require("../public/sunset-crop-4.jpg")}` + ")",
+          backgroundImage: "url(" + `${require(withImages('../public/sunset-crop-4.jpg'))}` + ")",
           width: "100%",
           height:"25%",
           backgroundRepeat: "repeat",
