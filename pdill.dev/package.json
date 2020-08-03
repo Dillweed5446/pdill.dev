@@ -10,6 +10,7 @@
   "dependencies": {
     "@material-ui/core": "^4.10.1",
     "@material-ui/icons": "^4.9.1",
+    "express": "^4.17.1",
     "harmony": "^1.5.1",
     "lodash": "^4.17.19",
     "next": "9.4.4",
@@ -27,7 +28,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
-    "eslint-plugin-standard": "^4.0.1"
+    "eslint-plugin-standard": "^4.0.1",
+    "nodemon": "^2.0.4"
   },
   "extends": [
     "eslint:recommended",
