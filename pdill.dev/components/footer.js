@@ -7,7 +7,7 @@ import { FaStackOverflow, FaWordpress } from 'react-icons/fa'
 export default function Footer () {
   return (
     <footer className="footer">
-      <Typography className="footer-heading" variant="h3" color="primary">Additional Resources</Typography>
+      <Typography className="footer-heading" variant="h3" color="secondary">Additional Resources</Typography>
       <a
         className="icon"
         href="https://github.com/Dillweed5446"
@@ -38,11 +38,20 @@ export default function Footer () {
       <a
         className="icon"
         href="https://waakaukau.blog/"
-        alt="WordPress.com"
+        alt="WordPress.com paddling and food blog"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaWordpress title="WordPress.com"/>
+        <FaWordpress title="WordPress.com paddling and food blog"/>
+      </a>
+      <a
+        className="icon"
+        href="https://pauldill.dev/"
+        alt="WordPress.com coding blog"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaWordpress title="WordPress.com coding blog"/>
       </a>
 
       <style jsx>{`
