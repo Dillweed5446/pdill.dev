@@ -3,31 +3,31 @@ import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
 // Create a theme instance.
 let theme = createMuiTheme({
   overrides: {
-    MuiCssBaseline: {
-      '@global': {
-        html: {
-          backgroundImage: "url(" + `${require("../public/sunset-crop-4.jpg")}` + ")",
-          width: "100%",
-          height:"0%",
-          backgroundRepeat: "repeat",
-          backgroundSize: "cover"
-        },
-        body: {
-          backgroundImage: "url(" + `${require("../public/sunset-crop-4.jpg")}` + ")",
-          width: "100%",
-          height:"75%",
-          backgroundRepeat: "repeat",
-          backgroundSize: "cover"
-        },
-        footer: {
-          backgroundImage: "url(" + `${require("../public/sunset-crop-4.jpg")}` + ")",
-          width: "100%",
-          height:"25%",
-          backgroundRepeat: "repeat",
-          backgroundSize: "cover"
-        }
-      }
-    },
+    // MuiCssBaseline: {
+    //   '@global': {
+    //     html: {
+    //       backgroundImage: "url(" + `${require("../public/ocean.jpg")}` + ")",
+    //       width: "100%",
+    //       height:"0%",
+    //       backgroundRepeat: "repeat",
+    //       backgroundSize: "cover"
+    //     },
+    //     body: {
+    //       backgroundImage: "url(" + `${require("../public/ocean.jpg")}` + ")",
+    //       width: "100%",
+    //       height:"75%",
+    //       backgroundRepeat: "repeat",
+    //       backgroundSize: "cover"
+    //     },
+    //     footer: {
+    //       backgroundImage: "url(" + `${require("../public/ocean.jpg")}` + ")",
+    //       width: "100%",
+    //       height:"25%",
+    //       backgroundRepeat: "repeat",
+    //       backgroundSize: "cover"
+    //     }
+    //   }
+    // },
     MuiTypography: {
       root: {
         paddingBottom: '2%'
