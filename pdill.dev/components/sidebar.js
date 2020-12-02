@@ -5,7 +5,12 @@ import { FaStackOverflow, FaWordpress } from 'react-icons/fa'
 
 export default function Sidebar () {
   return (
+<<<<<<< HEAD:pdill.dev/components/sidebar.js
     <footer className="sidebar">
+=======
+    <footer className="footer">
+      <Typography className="footer-heading" variant="h3" color="secondary">Additional Resources</Typography>
+>>>>>>> ca8f155af4005e3ea944f446bddce973f62e8510:pdill.dev/components/footer.js
       <a
         className="icon"
         href="https://github.com/Dillweed5446"
@@ -36,11 +41,20 @@ export default function Sidebar () {
       <a
         className="icon"
         href="https://waakaukau.blog/"
-        alt="WordPress.com"
+        alt="WordPress.com paddling and food blog"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaWordpress title="WordPress.com"/>
+        <FaWordpress title="WordPress.com paddling and food blog"/>
+      </a>
+      <a
+        className="icon"
+        href="https://pauldill.dev/"
+        alt="WordPress.com coding blog"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaWordpress title="WordPress.com coding blog"/>
       </a>
 
       <style jsx>{`
