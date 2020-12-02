@@ -1,13 +1,11 @@
 import React from 'react'
-import Typography from '@material-ui/core/Typography'
 import GitHubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn'
 import { FaStackOverflow, FaWordpress } from 'react-icons/fa'
 
-export default function Footer () {
+export default function Sidebar () {
   return (
-    <footer className="footer">
-      <Typography className="footer-heading" variant="h3" color="primary">Additional Resources</Typography>
+    <footer className="sidebar">
       <a
         className="icon"
         href="https://github.com/Dillweed5446"
@@ -46,16 +44,24 @@ export default function Footer () {
       </a>
 
       <style jsx>{`
-      .footer {
+      .sidebar {
+        position: sticky;
+        float: right;
+        top: 0;
+        right: 0;
+        display: inline-grid;
+
+
       },
 
-      .footer-heading {
-        padding: 3%;
-        padding-bottom: 2%;
-      },
+      // .footer-heading {
+      //   padding: 3%;
+      //   padding-bottom: 2%;
+      // },
       .icon {
-        padding: 3%;
+        padding: 2%;
         font-size: 3rem;
+        vertical-align: middle;
       }
 
         `}</style>
