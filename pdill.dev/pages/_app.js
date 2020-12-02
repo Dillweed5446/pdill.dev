@@ -4,7 +4,7 @@ import Head from 'next/head'
 import { ThemeProvider } from '@material-ui/core/styles'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import theme from '../src/theme'
-import Footer from '../components/footer'
+import Sidebar from '../components/sidebar'
 import '../styles.css'
 
 export default function MyApp (props) {
@@ -27,9 +27,9 @@ export default function MyApp (props) {
       </Head>
       <ThemeProvider theme={theme} class="wrapper">
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <Sidebar />
         <CssBaseline />
         <Component {...pageProps} />
-        <Footer />
       </ThemeProvider>
     </React.Fragment>
   )
