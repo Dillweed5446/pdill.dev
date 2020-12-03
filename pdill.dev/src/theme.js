@@ -65,10 +65,10 @@ let theme = createMuiTheme({
       main: '#EC9A29'
     },
     info: {
-      main: '#A06CD5'
+      main: '#5B3000'
     },
     success: {
-      main: '#20A4F3'
+      main: '#280003'
     }
   }
 }

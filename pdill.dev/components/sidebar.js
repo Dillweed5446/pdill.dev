@@ -36,11 +36,20 @@ export default function Sidebar () {
       <a
         className="icon"
         href="https://waakaukau.blog/"
-        alt="WordPress.com"
+        alt="WordPress.com paddling and food blog"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaWordpress title="WordPress.com"/>
+        <FaWordpress title="WordPress.com paddling and food blog"/>
+      </a>
+      <a
+        className="icon"
+        href="https://pauldill.dev/"
+        alt="WordPress.com coding blog"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaWordpress title="WordPress.com coding blog"/>
       </a>
 
       <style jsx>{`
