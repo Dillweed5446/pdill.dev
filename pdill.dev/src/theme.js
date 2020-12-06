@@ -56,16 +56,13 @@ let theme = createMuiTheme({
       main: '#0F8B8D'
     },
     error: {
-      main: '#A8201A'
+      main: '#5B3000'
     },
     background: {
       default: '#DAD2D8'
     },
     warning: {
       main: '#EC9A29'
-    },
-    info: {
-      main: '#5B3000'
     },
     success: {
       main: '#280003'
