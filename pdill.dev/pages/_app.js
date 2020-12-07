@@ -8,6 +8,7 @@ import Sidebar from '../components/sidebar'
 import '../styles.css'
 
 export default function MyApp (props) {
+  'use strict'
   const { Component, pageProps } = props
 
   React.useEffect(() => {

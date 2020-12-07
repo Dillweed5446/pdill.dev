@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import React from 'react'
-import Link from 'next/link'
 import BoxModel from '../components/content-box'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'

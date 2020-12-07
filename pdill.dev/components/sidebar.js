@@ -5,7 +5,7 @@ import { FaStackOverflow, FaWordpress } from 'react-icons/fa'
 
 export default function Sidebar () {
   return (
-    <Sidebar className="sidebar">
+    <div className="sidebar">
       <a
         className="icon"
         href="https://github.com/Dillweed5446"
@@ -74,7 +74,7 @@ export default function Sidebar () {
       }
 
         `}</style>
-    </Sidebar>
+    </div>
 
   )
 }
