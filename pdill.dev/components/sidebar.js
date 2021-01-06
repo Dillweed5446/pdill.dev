@@ -7,7 +7,7 @@ import DropdownMenu from './dropdownMenu'
 export default function Sidebar () {
   return (
     <div className="sidebar">
-      <DropdownMenu />
+      <DropdownMenu className="icon"/>
       <a
         className="icon"
         href="https://github.com/Dillweed5446"
@@ -64,11 +64,6 @@ export default function Sidebar () {
 
 
       },
-
-      // .footer-heading {
-      //   padding: 3%;
-      //   padding-bottom: 2%;
-      // },
       .icon {
         padding: 2%;
         font-size: 3rem;
