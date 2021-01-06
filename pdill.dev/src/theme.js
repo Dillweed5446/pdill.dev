@@ -33,6 +33,12 @@ let theme = createMuiTheme({
         paddingBottom: '2%'
       }
     },
+    MuiButton: {
+      root: {
+        color: '#DAD2D8',
+        fontSize: '3rem'
+      }
+    },
     MuiGrid: {
       item: {
         backgroundColor: 'darkGrey',
@@ -50,22 +56,22 @@ let theme = createMuiTheme({
   },
   palette: {
     primary: {
-      main: '#143642'
+      main: '#143642' // Blue whale, very dark blue
     },
     secondary: {
-      main: '#0F8B8D'
+      main: '#0F8B8D' // dark cyan, lighter blue/teal
     },
     error: {
-      main: '#5B3000'
+      main: '#5B3000' // bakers chocolate, brown
     },
     background: {
-      default: '#DAD2D8'
+      default: '#DAD2D8' // thistle, light purple/lavender
     },
     warning: {
-      main: '#EC9A29'
+      main: '#EC9A29' // firebush, orange
     },
     success: {
-      main: '#280003'
+      main: '#280003' // rustic red, dark maroon
     }
   }
 }

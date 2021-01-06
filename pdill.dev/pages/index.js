@@ -17,14 +17,14 @@ export default function Home () {
 
         <main>
           <BoxModel>
-            <Typography variant="h1" className="name" color="primary">
+            <Typography variant="h1" className="name" color="primary" id="top">
               Paul Dill
             </Typography>
             <Typography variant="h2" className="title" color="primary">
               Aloha!  Welcome to my portfolio!
             </Typography>
 
-            <Typography variant="body1" color="error" style={{ textIndent: '0.625rem' }}>
+            <Typography variant="body1" color="error" style={{ textIndent: '0.625rem' }} id="About">
               {/* Write intro here */}
             My name is Paul Dill.  I&apos;ve been learning web development for the last year and a half with my main focus on front-end engineering.
             Currently, I&apos;m working to hone my skills on the front-end, though eventually I would prefer to transition into work on back-end development.
@@ -110,7 +110,7 @@ export default function Home () {
               </div>
             </div>
 
-            <Typography variant="h2" color="primary">Projects</Typography>
+            <Typography variant="h2" color="primary" id="projects">Projects</Typography>
             <Container
               alignitems="stretch"
               direction="column"
