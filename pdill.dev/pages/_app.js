@@ -8,6 +8,7 @@ import Sidebar from '../components/sidebar'
 import '../styles.css'
 
 export default function MyApp (props) {
+  'use strict'
   const { Component, pageProps } = props
 
   React.useEffect(() => {
@@ -25,7 +26,7 @@ export default function MyApp (props) {
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
       </Head>
-      <ThemeProvider theme={theme} class="wrapper">
+      <ThemeProvider theme={theme} >
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <Sidebar />
         <CssBaseline />
