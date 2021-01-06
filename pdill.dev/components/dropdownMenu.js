@@ -24,9 +24,11 @@ export default function SimpleMenu () {
   }
 
   function handleClick (event) {
-    setIsActive(!isActive)
-    isActive ? setList(listMenuOptions) : setList(null)
     setAnchorEl(event.currentTarget)
+    listMenuOptions()
+    console.log(newList)
+    setIsActive(!isActive)
+    isActive ? setList(newList) : setList(null)
   }
 
   function handleClose () {
