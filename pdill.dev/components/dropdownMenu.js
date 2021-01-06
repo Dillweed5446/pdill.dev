@@ -12,23 +12,9 @@ export default function SimpleMenu () {
     { name: 'Contact', href: 'mailto:paul@pdill.dev' },
     { name: 'Resume' }
   ]
-  const [list, setList] = useState([])
-  const [isActive, setIsActive] = useState(false)
-  const newList = []
-
-  const listMenuOptions = () => {
-    Object.values(menuOptions).forEach((item, index) => {
-      newList.push(<MenuItem key={index} onClick={handleClose}><a href={item.href}>{item.name}</a></MenuItem>)
-    })
-    return newList
-  }
 
   function handleClick (event) {
     setAnchorEl(event.currentTarget)
-    listMenuOptions()
-    console.log(newList)
-    setIsActive(!isActive)
-    isActive ? setList(newList) : setList(null)
   }
 
   function handleClose () {
@@ -57,7 +43,11 @@ export default function SimpleMenu () {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        {list}
+        {Object.values(menuOptions).map((item, index) => (
+          <MenuItem key={index} onClick={handleClose}>
+            <a href={item.href}>{item.name}</a>
+          </MenuItem>
+        ))}
       </Menu>
     </div>
   )
