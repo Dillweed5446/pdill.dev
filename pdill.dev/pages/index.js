@@ -27,7 +27,7 @@ export default function Home () {
             <Typography variant="body1" color="error" style={{ textIndent: '0.625rem' }} id="About">
               {/* Write intro here */}
             My name is Paul Dill.  I&apos;ve been learning web development for the last year and a half with my main focus on front-end engineering.
-            Currently, I&apos;m working to hone my skills on the front-end, though eventually I would prefer to transition into work on back-end development.
+            Currently, I&apos;m working to hone my skills on the front-end, while also starting to learn the back-end with the intention of becoming a full stack developer.
             This portfolio will be a way for me to experiment, build projects, learn, and generally give me a place to show my work.
             </Typography>
             <Typography variant="body1" color="error" style={{ textIndent: '0.625rem' }}>
@@ -117,9 +117,6 @@ export default function Home () {
               justify="center">
               <Grid
                 item xs
-                // direction="column"
-                // justify="center"
-                // alignItems="stretch"
               >
                 <a href="https://mothercupboard.com" className="card" target="_blank" rel="noopener noreferrer">
                   <Typography variant="h4">Mothercupboard</Typography>

@@ -1,10 +1,11 @@
-import React, { useState, Fragment, useEffect } from 'react'
+import React, { useState } from 'react'
 import Button from '@material-ui/core/Button'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 
 export default function SimpleMenu () {
-  const [anchorEl, setAnchorEl] = React.useState(null)
+  const [anchorEl, setAnchorEl] = useState(null)
+
   const menuOptions = [
     { name: 'Home', href: 'https://pdill.dev/#top' },
     { name: 'About me', href: 'https://pdill.dev/#About' },
