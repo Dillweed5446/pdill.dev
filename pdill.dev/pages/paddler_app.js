@@ -2,7 +2,6 @@ import { TableCell, TableContainer, TableHead, TableRow, TextField, Typography, 
 import React, { useState, Fragment } from 'react'
 import BoxModel from '../components/content-box'
 import Axios from 'axios'
-require('dotenv').config()
 
 export default function PaddleConditions () {
   const [isLoading, setLoading] = useState(true)
