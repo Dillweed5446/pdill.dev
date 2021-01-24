@@ -12,6 +12,7 @@
     "@material-ui/core": "^4.10.1",
     "@material-ui/icons": "^4.9.1",
     "axios": "^0.21.1",
+    "dotenv-webpack": "^6.0.0",
     "harmony": "^1.5.1",
     "luxon": "^1.25.0",
     "mongodb": "^3.6.0",
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
     "eslint": "^7.2.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.21.1",
@@ -58,6 +60,7 @@
         "property": "myFavoriteWrapper"
       }
     ],
+    "proxy": "http://localhost:3000/paddler_app",
     "linkComponents": [
       "Hyperlink",
       {
