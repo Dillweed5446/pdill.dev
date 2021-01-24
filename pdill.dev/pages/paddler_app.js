@@ -2,10 +2,12 @@ import { TableCell, TableContainer, TableHead, TableRow, TextField, Typography, 
 import React, { useState, Fragment } from 'react'
 import BoxModel from '../components/content-box'
 import Axios from 'axios'
+require('dotenv').config()
 
 export default function PaddleConditions () {
   const [isLoading, setLoading] = useState(true)
   const [apiData, setData] = useState([])
+  const API_KEY = process.env.REACT_APP_API_KEY
   const lat = 21.3
   const lng = -157.8
   const today = new Date()
