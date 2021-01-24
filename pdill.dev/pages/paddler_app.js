@@ -2,32 +2,42 @@ import { TableCell, TableContainer, TableHead, TableRow, TextField, Typography, 
 import React, { useState, Fragment } from 'react'
 import BoxModel from '../components/content-box'
 import Axios from 'axios'
-import { DateTime } from 'luxon'
 
 export default function PaddleConditions () {
   const [isLoading, setLoading] = useState(true)
   const [apiData, setData] = useState([])
+  const lat = 21.3
+  const lng = -157.8
+  const today = new Date()
+  const tenDaysOut = new Date(new Date().setDate(new Date().getDate() + parseInt(10)))
+  const params = [
+    'secondarySwellDirection', 'secondarySwellHeight', 'secondarySwellPeriod',
+    'windWaveDirection', 'windWaveHeight', 'windWavePeriod',
+    'swellDirection', 'swellHeight', 'swellPeriod',
+    'waveDirection', 'waveHeight', 'wavePeriod',
+    'windDirection', 'windSpeed', 'gust',
+    'waterTemperature', 'currentDirection', 'currentSpeed', 'cloudCover', 'airTemperature'
+  ].join(',')
 
-  const apiCall = async () => {
-    await Axios.get('https://api.weather.gov/gridpoints/HFO/229,73')
-      //   .then((response) => response.json())
-      .then((response) => setData(response.data.properties))
+  const apiCall = () => {
+    Axios.all([
+      Axios.get(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}`, {
+        headers: {
+          // Need to figure out why I'm getting 403 (forbidden) code when I run api with API_KEY as auth.  Using full api key here is unsafe
+          Authorization: `${API_KEY}`
+        }
+      }
+      ),
+      Axios.get(`https://api.stormglass.io/v2/tide/extremes/point?lat=${lat}&lng=${lng}&start=${today.toISOString()}&end=${tenDaysOut.toISOString()}`, {
+        headers: {
+          Authorization: `${API_KEY}`
+        }
+      })
+    ])
+      .then(async (response) => await setData(response))
       .catch((error) => console.error(error))
       .finally(() => setLoading(false))
   }
-
-  //   const apiData = Object.values(data)
-//   const mapDataToTable = () => {
-//     for (let i = 0; i <= 30; i++) {
-//       <TableRow key={i}>
-//         <TableCell>{new Date(Date.parse(apiData.temperature.values[i].validTime.split('/')[0])).toLocaleString()}</TableCell>
-//         <TableCell>{apiData.temperature.values[i].value * (9 / 5) + 32}</TableCell>
-//         <TableCell>{apiData.windDirection.values[i].value}</TableCell>
-//         <TableCell>{apiData.windSpeed.values[i].value}</TableCell>
-//         <TableCell>{apiData.windGust.values[i].value}</TableCell>
-//       </TableRow>
-//     }
-//   }
 
   if (isLoading === true) {
     return (
@@ -76,42 +86,11 @@ export default function PaddleConditions () {
               </TableRow>
             </TableHead>
             <TableBody>
-              {console.log(apiData)}
-              <TableRow key={0}>
-                <TableCell>{new Date(Date.parse(apiData.temperature.values[0].validTime.split('/')[0])).toLocaleString()}</TableCell>
-                <TableCell>{apiData.temperature.values[0].value * (9 / 5) + 32}</TableCell>
-                <TableCell>{apiData.windDirection.values[0].value}</TableCell>
-                <TableCell>{apiData.windSpeed.values[0].value}</TableCell>
-                <TableCell>{apiData.windGust.values[0].value}</TableCell>
-              </TableRow>
-              <TableRow key={1}>
-                <TableCell>{new Date(Date.parse(apiData.temperature.values[1].validTime.split('/')[0])).toLocaleString()}</TableCell>
-                <TableCell>{apiData.temperature.values[1].value * (9 / 5) + 32}</TableCell>
-                <TableCell>{apiData.windDirection.values[1].value}</TableCell>
-                <TableCell>{apiData.windSpeed.values[1].value}</TableCell>
-                <TableCell>{apiData.windGust.values[1].value}</TableCell>
-              </TableRow>
-              <TableRow key={2}>
-                <TableCell>{new Date(Date.parse(apiData.temperature.values[2].validTime.split('/')[0])).toLocaleString()}</TableCell>
-                <TableCell>{apiData.temperature.values[2].value * (9 / 5) + 32}</TableCell>
-                <TableCell>{apiData.windDirection.values[2].value}</TableCell>
-                <TableCell>{apiData.windSpeed.values[2].value}</TableCell>
-                <TableCell>{apiData.windGust.values[2].value}</TableCell>
-              </TableRow>
-              <TableRow key={3}>
-                <TableCell>{new Date(Date.parse(apiData.temperature.values[3].validTime.split('/')[0])).toLocaleString()}</TableCell>
-                <TableCell>{apiData.temperature.values[3].value * (9 / 5) + 32}</TableCell>
-                <TableCell>{apiData.windDirection.values[3].value}</TableCell>
-                <TableCell>{apiData.windSpeed.values[3].value}</TableCell>
-                <TableCell>{apiData.windGust.values[3].value}</TableCell>
-              </TableRow>
-              <TableRow key={4}>
-                <TableCell>{new Date(Date.parse(apiData.temperature.values[4].validTime.split('/')[0])).toLocaleString()}</TableCell>
-                <TableCell>{apiData.temperature.values[4].value * (9 / 5) + 32}</TableCell>
-                <TableCell>{apiData.windDirection.values[4].value}</TableCell>
-                <TableCell>{apiData.windSpeed.values[4].value}</TableCell>
-                <TableCell>{apiData.windGust.values[4].value}</TableCell>
-              </TableRow>
+              {/* The function below extracts the key value pairs for one hour of one day and logs them.  Progress! */}
+              {apiData[0].data.hours.slice(0, 1).map(item => {
+                Object.entries(item).forEach(entry => console.log(`Key: ${entry[0]} Value: ${entry[1].sg}`))
+              })}
+
             </TableBody>
           </TableContainer>
         </BoxModel>
@@ -119,18 +98,3 @@ export default function PaddleConditions () {
     )
   }
 };
-
-// apiData.temperature.values[0].validTime,
-// apiData.temperature.values[0].value * (9 / 5) + 32,apiData.temperature.values[0].validTime,
-// apiData.temperature.values[0].value * (9 / 5) + 32,
-// apiData.windDirection.values[0].value,
-// apiData.windSpeed.values[0].value,
-// apiData.windGust.values[0].value
-
-// new Date(Date.parse(item.validTime.split('/')[0])).toLocaleString()
-
-// apiData.windDirection.values[0].value,
-// apiData.windSpeed.values[0].value,
-// apiData.windGust.values[0].value
-// .replace(/[/PTH]/gi, '')
-// .temperature.values.slice(0, 30)
