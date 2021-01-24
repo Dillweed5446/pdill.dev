@@ -6,6 +6,7 @@ import Axios from 'axios'
 export default function PaddleConditions () {
   const [isLoading, setLoading] = useState(true)
   const [apiData, setData] = useState([])
+  const API_KEY = process.env.REACT_APP_API_KEY
   const lat = 21.3
   const lng = -157.8
   const today = new Date()
