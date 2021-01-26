@@ -6,18 +6,21 @@ import Axios from 'axios'
 export default function PaddleConditions () {
   const [isLoading, setLoading] = useState(true)
   const [apiData, setData] = useState([])
-  const API_KEY = process.env.REACT_APP_API_KEY
   const lat = 21.3
   const lng = -157.8
   const today = new Date()
   const tenDaysOut = new Date(new Date().setDate(new Date().getDate() + parseInt(10)))
+  const end = `${tenDaysOut.getFullYear()}-${(tenDaysOut.getMonth() + 1).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}-${(tenDaysOut.getDate()).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}`
   const params = [
+    // wave info
     'secondarySwellDirection', 'secondarySwellHeight', 'secondarySwellPeriod',
-    'windWaveDirection', 'windWaveHeight', 'windWavePeriod',
     'swellDirection', 'swellHeight', 'swellPeriod',
     'waveDirection', 'waveHeight', 'wavePeriod',
-    'windDirection', 'windSpeed', 'gust',
-    'waterTemperature', 'currentDirection', 'currentSpeed', 'cloudCover', 'airTemperature'
+    'windWaveDirection', 'windWaveHeight', 'windWavePeriod',
+    // wind and current
+    'windDirection', 'windSpeed', 'gust', 'currentDirection', 'currentSpeed',
+    // weather
+    'cloudCover', 'waterTemperature', 'airTemperature'
   ].join(',')
 
   const apiCall = () => {
@@ -25,13 +28,23 @@ export default function PaddleConditions () {
       Axios.get(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}`, {
         headers: {
           // Need to figure out why I'm getting 403 (forbidden) code when I run api with API_KEY as auth.  Using full api key here is unsafe
-          Authorization: `${API_KEY}`
+          Authorization: process.env.NEXT_PUBLIC_API_KEY
+
+        }
+      }
+      ),
+      Axios.get(`https://api.stormglass.io/v2/astronomy/point?lat=${lat}&lng=${lng}&end=${end}`, {
+        headers: {
+          // Need to figure out why I'm getting 403 (forbidden) code when I run api with API_KEY as auth.  Using full api key here is unsafe
+          Authorization: process.env.NEXT_PUBLIC_API_KEY
+
         }
       }
       ),
       Axios.get(`https://api.stormglass.io/v2/tide/extremes/point?lat=${lat}&lng=${lng}&start=${today.toISOString()}&end=${tenDaysOut.toISOString()}`, {
         headers: {
-          Authorization: `${API_KEY}`
+          Authorization: process.env.NEXT_PUBLIC_API_KEY
+
         }
       })
     ])
@@ -87,6 +100,8 @@ export default function PaddleConditions () {
               </TableRow>
             </TableHead>
             <TableBody>
+              {console.log(end)}
+              {console.log(apiData)}
               {/* The function below extracts the key value pairs for one hour of one day and logs them.  Progress! */}
               {apiData[0].data.hours.slice(0, 1).map(item => {
                 Object.entries(item).forEach(entry => console.log(`Key: ${entry[0]} Value: ${entry[1].sg}`))
