@@ -6,8 +6,7 @@ import { Context } from './state/Store'
 
 export default function PaddleConditions () {
   const [state, dispatch] = useContext(Context)
-  const lat = 21.3
-  const lng = -157.8
+  const [lat, lng] = state.location
   const today = new Date()
   const tenDaysOut = new Date(new Date().setDate(new Date().getDate() + parseInt(10)))
   const end = `${tenDaysOut.getFullYear()}-${(tenDaysOut.getMonth() + 1).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}-${(tenDaysOut.getDate()).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}`

@@ -1,16 +1,14 @@
-import { array } from "prop-types"
-
 const Reducer = (state, action) => {
   switch (action.type) {
     case 'SET_LOCATION':
       return {
         ...state,
-        location: []
+        location: action.payload
       }
     case 'SET_LOADING':
       return {
         ...state,
-        isLoading: Boolean
+        isLoading: action.Boolean
       }
     case 'SET_DATA':
       return {
