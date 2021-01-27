@@ -1,6 +1,6 @@
 import { TableCell, TableContainer, TableHead, TableRow, TextField, Typography, TableBody, Button } from '@material-ui/core'
 import React, { useContext, Fragment, useEffect } from 'react'
-import BoxModel from '../components/content-box'
+import BoxModel from './content-box'
 import Axios from 'axios'
 import { Context } from './state/Store'
 

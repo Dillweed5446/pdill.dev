@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import MyLayout from '../components/layout'
-import PaddleConditions from './paddler_app'
-import Store from './state/Store'
+import PaddleConditions from '../components/paddler_app'
+import Store from '../components/state/Store'
 
 const App = () => {
   return (
