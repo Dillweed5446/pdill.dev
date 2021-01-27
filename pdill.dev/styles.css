@@ -10,7 +10,11 @@ body {
     perspective-origin: 50% 50%;
     animation: animation 100s linear infinite;
   }
-  
+
+  #__next {
+    width: 100%;
+  }
+
   @keyframes animation {
      100%{
       background-position:0px -3000px;
