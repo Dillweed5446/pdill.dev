@@ -3,7 +3,7 @@ import Reducer from './Reducer'
 import PropTypes from 'prop-types'
 
 const initialState = {
-  location: [],
+  location: [21.3, -157.8],
   isLoading: false,
   data: [],
   error: null

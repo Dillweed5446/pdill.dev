@@ -1,11 +1,11 @@
-import { array } from "prop-types"
+import { array } from 'prop-types'
 
 const Reducer = (state, action) => {
   switch (action.type) {
     case 'SET_LOCATION':
       return {
         ...state,
-        location: []
+        location: action.payload
       }
     case 'SET_LOADING':
       return {

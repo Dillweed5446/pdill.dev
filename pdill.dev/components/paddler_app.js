@@ -6,8 +6,8 @@ import { Context } from './state/Store'
 
 export default function PaddleConditions () {
   const [state, dispatch] = useContext(Context)
-  const lat = 21.3
-  const lng = -157.8
+  const lat = state.location[0]
+  const lng = state.location[1]
   const today = new Date()
   const tenDaysOut = new Date(new Date().setDate(new Date().getDate() + parseInt(10)))
   const end = `${tenDaysOut.getFullYear()}-${(tenDaysOut.getMonth() + 1).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}-${(tenDaysOut.getDate()).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}`
@@ -24,6 +24,7 @@ export default function PaddleConditions () {
   ].join(',')
 
   const clickHandler = () => {
+    dispatch({ type: 'SET_LOCATION', payload: [50, 50] })
     dispatch({ type: 'SET_LOADING', isLoading: true })
   }
 
@@ -60,7 +61,9 @@ export default function PaddleConditions () {
           const tides = response[2]
           dispatch({ type: 'SET_DATA', payload: [weather, sun, tides] })
         })
-        .catch(error => dispatch({ type: 'SET_ERROR', payload: error }))
+        .catch(error => {
+          dispatch({ type: 'SET_ERROR', payload: error })
+        })
         .finally(() => dispatch({ type: 'SET_LOADING', isLoading: false }))
     } else {
       dispatch({ type: 'RESET' })
@@ -117,7 +120,7 @@ export default function PaddleConditions () {
             </TableRow>
           </TableHead>
           <TableBody>
-            {console.log(end)}
+            {console.log(state)}
             {/* {console.log(state.data)} */}
             {/* The function below extracts the key value pairs for one hour of one day and logs them.  Progress! */}
             {/* {apiData[0].data.hours.slice(0, 1).map(item => {
