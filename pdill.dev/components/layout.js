@@ -1,25 +1,25 @@
 import React from 'react'
-import { initGA, logPageView } from '../utils/analytics'
+import Sidebar from './sidebar'
 import PropTypes from 'prop-types'
+import { ThemeProvider } from '@material-ui/core/styles'
+import CssBaseline from '@material-ui/core/CssBaseline'
+import theme from '../src/theme'
 
-export default class Layout extends React.Component {
-  componentDidMount () {
-    if (!window.GA_INITIALIZED) {
-      initGA()
-      window.GA_INITIALIZED = true
-    }
-    logPageView()
-  }
-
-  render () {
-    return (
-      <div>
-        {this.props.children}
-      </div>
-    )
-  }
+export default function MyLayout ({ children }) {
+  return (
+    <>
+      <ThemeProvider theme={theme} >
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
+        <Sidebar/>
+        <div>
+          {children}
+        </div>
+      </ThemeProvider>
+    </>
+  )
 }
 
-Layout.propTypes = {
+MyLayout.propTypes = {
   children: PropTypes.node.isRequired
 }
