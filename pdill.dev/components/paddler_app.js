@@ -6,7 +6,7 @@ import { Context } from './state/Store'
 
 export default function PaddleConditions () {
   const [state, dispatch] = useContext(Context)
-  let [isLoading, setLoading] = useState(false)
+  const [isLoading, setLoading] = useState(false)
   const [lat, lng] = state.location
   const today = new Date()
   const tenDaysOut = new Date(new Date().setDate(new Date().getDate() + parseInt(10)))
@@ -62,7 +62,6 @@ export default function PaddleConditions () {
           dispatch({ type: 'SET_DATA', payload: [weather, sun, tides] })
         })
         .catch(error => dispatch({ type: 'SET_ERROR', payload: error }))
-        // .finally(() => setLoading(false))
     } else {
       dispatch({ type: 'RESET' })
     }
@@ -118,8 +117,6 @@ export default function PaddleConditions () {
             </TableRow>
           </TableHead>
           <TableBody>
-            {/* {isLoading === false ? console.log(state.location) : console.log('true')} */}
-            {console.log(state.data)}
             {console.log(isLoading)}
             {/* The function below extracts the key value pairs for one hour of one day and logs them.  Progress! */}
             {/* {apiData[0].data.hours.slice(0, 1).map(item => {

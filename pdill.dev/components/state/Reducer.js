@@ -5,11 +5,6 @@ const Reducer = (state, action) => {
         ...state,
         location: action.payload
       }
-    // case 'SET_LOADING':
-    //   return {
-    //     ...state,
-    //     isLoading: Boolean
-    //   }
     case 'SET_DATA':
       return {
         ...state,

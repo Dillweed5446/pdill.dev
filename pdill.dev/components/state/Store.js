@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 
 const initialState = {
   location: [21.3, -157.8],
-  // isLoading: false,
   data: [],
   error: null
 }
