@@ -118,6 +118,7 @@ export default function PaddleConditions () {
           </TableHead>
           <TableBody>
             {console.log(isLoading)}
+            {console.log(state.data)}
             {/* The function below extracts the key value pairs for one hour of one day and logs them.  Progress! */}
             {/* {apiData[0].data.hours.slice(0, 1).map(item => {
                 Object.entries(item).forEach(entry => console.log(`Key: ${entry[0]} Value: ${entry[1].sg}`))
