@@ -4,10 +4,11 @@ import PropTypes from 'prop-types'
 
 const initialState = {
   location: [21.3, -157.8],
-  isLoading: false,
   data: [],
   error: null
 }
+
+export const Context = createContext(initialState)
 
 const Store = ({ children }) => {
   const [state, dispatch] = useReducer(Reducer, initialState)
@@ -22,5 +23,4 @@ Store.propTypes = {
   children: PropTypes.node.isRequired
 }
 
-export const Context = createContext(initialState)
 export default Store
