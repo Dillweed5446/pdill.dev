@@ -1,13 +1,13 @@
 import { TableCell, TableContainer, TableHead, TableRow, TextField, Typography, TableBody, Button } from '@material-ui/core'
-import React, { useContext, Fragment, useEffect } from 'react'
+import React, { useContext, Fragment, useEffect, useState } from 'react'
 import BoxModel from './content-box'
 import Axios from 'axios'
 import { Context } from './state/Store'
 
 export default function PaddleConditions () {
   const [state, dispatch] = useContext(Context)
-  const lat = state.location[0]
-  const lng = state.location[1]
+  const [isLoading, setLoading] = useState(false)
+  const [lat, lng] = state.location
   const today = new Date()
   const tenDaysOut = new Date(new Date().setDate(new Date().getDate() + parseInt(10)))
   const end = `${tenDaysOut.getFullYear()}-${(tenDaysOut.getMonth() + 1).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}-${(tenDaysOut.getDate()).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}`
@@ -23,14 +23,14 @@ export default function PaddleConditions () {
     'cloudCover', 'waterTemperature', 'airTemperature'
   ].join(',')
 
-  const clickHandler = () => {
-    dispatch({ type: 'SET_LOCATION', payload: [50, 50] })
-    dispatch({ type: 'SET_LOADING', isLoading: true })
+  const clickHandler = (e) => {
+    e.preventDefault()
+    setLoading(true)
   }
 
   useEffect(() => {
-    let mounted = true
-    if (mounted) {
+    if (isLoading === true) {
+      console.log('calling api')
       Axios.all([
         Axios.get(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}`, {
           headers: {
@@ -61,17 +61,14 @@ export default function PaddleConditions () {
           const tides = response[2]
           dispatch({ type: 'SET_DATA', payload: [weather, sun, tides] })
         })
-        .catch(error => {
-          dispatch({ type: 'SET_ERROR', payload: error })
-        })
-        .finally(() => dispatch({ type: 'SET_LOADING', isLoading: false }))
+        .catch(error => dispatch({ type: 'SET_ERROR', payload: error }))
     } else {
       dispatch({ type: 'RESET' })
     }
     return () => {
-      mounted = false
+      setLoading(false)
     }
-  }, [])
+  }, [isLoading])
 
   // if (state.isLoading === true) {
   //   return (
@@ -120,8 +117,8 @@ export default function PaddleConditions () {
             </TableRow>
           </TableHead>
           <TableBody>
-            {console.log(state)}
-            {/* {console.log(state.data)} */}
+            {console.log(isLoading)}
+            {console.log(state.data)}
             {/* The function below extracts the key value pairs for one hour of one day and logs them.  Progress! */}
             {/* {apiData[0].data.hours.slice(0, 1).map(item => {
                 Object.entries(item).forEach(entry => console.log(`Key: ${entry[0]} Value: ${entry[1].sg}`))
