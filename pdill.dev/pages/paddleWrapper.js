@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 import MyLayout from '../components/layout'
-import PaddleConditions from '../components/paddler_app'
+import PaddleConditions from '../components/Paddler_App/paddler_app'
 import Store from '../components/state/Store'
 
 const App = () => {
