@@ -27,7 +27,7 @@ export default function WindGraph () {
         type: 'line'
       }],
       labels: state.data[0].data.hours.slice(firstHour, lastHour).map(item => {
-        const date = new Date(item.time).toLocaleString('en-US', { timeZone: 'UTC' })
+        const date = new Date(item.time).toLocaleString('en-US', { timeZone: 'HST' })
         return date
       }) // Date (x-axis)
     },
