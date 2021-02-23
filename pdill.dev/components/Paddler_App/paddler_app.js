@@ -1,17 +1,20 @@
-import { TableCell, TableContainer, TableHead, TableRow, TextField, Typography, TableBody, Button } from '@material-ui/core'
+import { TextField, Typography, Button } from '@material-ui/core'
+import Box from '@material-ui/core/Box'
+import { Pagination } from '@material-ui/lab'
 import React, { useContext, Fragment, useEffect, useState } from 'react'
 import BoxModel from '../content-box'
 import Axios from 'axios'
 import { Context } from '../state/Store'
 import WindGraph from './wind_graph'
+import usePagination from '../pagination'
 
 export default function PaddleConditions () {
   const [state, dispatch] = useContext(Context)
   const [isLoading, setLoading] = useState(false)
   const [readyToRender, setReadyToRender] = useState(false)
   const [lat, lng] = state.location
-  const today = new Date()
-  const tenDaysOut = new Date(new Date().setDate(new Date().getDate() + parseInt(10)))
+  const today = new Date(new Date().setDate(new Date().getDate() - parseInt(1)))
+  const tenDaysOut = new Date(new Date().setDate(new Date().getDate() + parseInt(9)))
   const end = `${tenDaysOut.getFullYear()}-${(tenDaysOut.getMonth() + 1).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}-${(tenDaysOut.getDate()).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}`
   const params = [
     // wave info
@@ -34,26 +37,26 @@ export default function PaddleConditions () {
     if (isLoading === true) {
       console.log('calling api')
       Axios.all([
-        Axios.get(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}`, {
+        Axios.get(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}&start=${today.toISOString()}&end=${tenDaysOut.toISOString()}`, {
           headers: {
             Authorization: process.env.NEXT_PUBLIC_API_KEY
 
           }
         }
-        ),
-        Axios.get(`https://api.stormglass.io/v2/astronomy/point?lat=${lat}&lng=${lng}&end=${end}`, {
-          headers: {
-            Authorization: process.env.NEXT_PUBLIC_API_KEY
+        )
+        // Axios.get(`https://api.stormglass.io/v2/astronomy/point?lat=${lat}&lng=${lng}&end=${end}`, {
+        //   headers: {
+        //     Authorization: process.env.NEXT_PUBLIC_API_KEY
 
-          }
-        }
-        ),
-        Axios.get(`https://api.stormglass.io/v2/tide/extremes/point?lat=${lat}&lng=${lng}&start=${today.toISOString()}&end=${tenDaysOut.toISOString()}`, {
-          headers: {
-            Authorization: process.env.NEXT_PUBLIC_API_KEY
+        //   }
+        // }
+        // ),
+        // Axios.get(`https://api.stormglass.io/v2/tide/extremes/point?lat=${lat}&lng=${lng}&start=${today.toISOString()}&end=${tenDaysOut.toISOString()}`, {
+        //   headers: {
+        //     Authorization: process.env.NEXT_PUBLIC_API_KEY
 
-          }
-        })
+        //   }
+        // })
       ])
         .then(response => {
           dispatch({ type: 'SET_DATA', payload: response })
@@ -67,6 +70,14 @@ export default function PaddleConditions () {
       setLoading(false)
     }
   }, [isLoading])
+
+  const _DATA = usePagination(state.data, 24)
+
+  const handlePagination = (e, p) => {
+    dispatch({ type: 'SET_PAGE', page: p })
+    _DATA.jump(p)
+    _DATA.currentData(p)
+  }
 
   if (readyToRender === false) {
     return (
@@ -96,19 +107,28 @@ export default function PaddleConditions () {
           <div>
             {console.log(isLoading)}
             {console.log(state.data)}
-            {/* The function below extracts the key value pairs for one hour of one day and logs them.  Progress! */}
-            {/* {state.data[0].data.hours.slice(0, 1).map(item => {
-            Object.entries(item).forEach(entry => console.log(`Key: ${entry[0]} Value: ${entry[1].sg}`))
-          })} */}
-            {state.data[0].data.hours.map(item => {
-              console.log(`Date: ${item.time}`)
-              console.log(`Gust: ${item.gust.sg}`)
-              console.log(`Wind Direction: ${item.windDirection.sg}`)
-              console.log(`Wind Speed: ${item.windSpeed.sg}`)
-              // This function maps the value of gusts (sg value)
-            })}
+            {console.log(state.firstData)}
+            {console.log(state.lastData)}
           </div>
-          <WindGraph />
+          <Box>
+            <Pagination
+              count= {state.maxPage}
+              size="large"
+              page={state.page}
+              variant="outlined"
+              shape="rounded"
+              onChange={handlePagination}
+            />
+            <WindGraph />
+            <Pagination
+              count={state.maxPage}
+              size="large"
+              page={state.page}
+              variant="outlined"
+              shape="rounded"
+              onChange={handlePagination}
+            />
+          </Box>
         </BoxModel>
       </Fragment>
     )
