@@ -15,6 +15,21 @@ const Reducer = (state, action) => {
         ...state,
         error: action.payload
       }
+    case 'SET_PAGE':
+      return {
+        ...state,
+        page: action.page
+      }
+    case 'SET_FIRST_DATA_POINT':
+      return {
+        ...state,
+        firstData: action.firstData
+      }
+    case 'SET_LAST_DATA_POINT':
+      return {
+        ...state,
+        lastData: action.lastData
+      }
     case 'RESET':
       return {
         ...state
