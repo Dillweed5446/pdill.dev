@@ -7,9 +7,9 @@ export default function SimpleMenu () {
   const [anchorEl, setAnchorEl] = useState(null)
 
   const menuOptions = [
-    { name: 'Home', href: 'https://pdill.dev/#top' },
-    { name: 'About me', href: 'https://pdill.dev/#About' },
-    { name: 'Projects', href: 'https://pdill.dev/#projects' },
+    { name: 'Home', href: '/#top' },
+    { name: 'About me', href: '/#About' },
+    { name: 'Projects', href: '/#projects' },
     { name: 'Contact', href: 'mailto:paul@pdill.dev' },
     { name: 'Resume' }
   ]

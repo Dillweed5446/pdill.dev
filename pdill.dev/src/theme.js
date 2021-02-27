@@ -45,7 +45,8 @@ let theme = createMuiTheme({
         padding: '1%',
         border: '.5em #20A4F3 double',
         borderRadius: '1em',
-        textAlign: 'center'
+        textAlign: 'center',
+        margin: '.5rem'
       }
     },
     MuiSvgIcon: {
