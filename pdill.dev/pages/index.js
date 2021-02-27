@@ -118,9 +118,29 @@ export default function Home () {
               item xs
             >
               <a href="https://mothercupboard.com" className="card" target="_blank" rel="noopener noreferrer">
-                <Typography variant="h4">Mothercupboard</Typography>
+                <Typography variant="h4" style={{ textShadow: '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black' }}>Mothercupboard</Typography>
                 <Typography variant="body1" color="secondary"
                 >Meal Planner app that I&apos;m building with a friend. Use adwilson0286@gmail.com to login.</Typography>
+              </a>
+            </Grid>
+            <Grid
+              item xs
+            >
+              <a href="/paddleWrapper" className="card" target="_blank" rel="noopener noreferrer">
+                <Typography variant="h4" style={{ textShadow: '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black' }}>Ocean Paddling Weather App</Typography>
+                <Typography variant="body1" color="secondary"
+                >Application that I&apos;ve built from scratch for checking wind, wave, current, tide and general weather conditions for outrigger canoe paddling.
+                App is built using Next.js, Chart.js for graphs, Axios for making third party API calls, and React.Context for state management.</Typography>
+              </a>
+            </Grid>
+            <Grid
+              item xs
+            >
+              <a href="https://pauldill.dev/?p=73" className="card" target="_blank" rel="noopener noreferrer">
+                <Typography variant="h4" style={{ textShadow: '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black' }}>Project Euler</Typography>
+                <Typography variant="body1" color="secondary"
+                >Mathematical algorithm practice.  These problems are a great way to challenge coding skills, and strengthen mathematical thinking.
+                Follow link to see blog posts written about my solutions.</Typography>
               </a>
             </Grid>
           </Container>
