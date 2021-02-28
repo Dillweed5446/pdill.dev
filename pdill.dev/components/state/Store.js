@@ -11,7 +11,10 @@ const initialState = {
   page: 1,
   firstData: 0,
   lastData: 23,
-  maxPage: 9
+  firstTideData: 0,
+  lastTideData: 3,
+  sunData: 0,
+  maxPage: 8
 }
 
 export const Context = createContext(initialState)
