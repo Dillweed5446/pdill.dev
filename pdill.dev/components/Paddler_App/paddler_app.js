@@ -6,6 +6,11 @@ import BoxModel from '../content-box'
 import Axios from 'axios'
 import { Context } from '../state/Store'
 import WindGraph from './wind_graph'
+import WaveGraph from './wave_graph'
+import WavePeriodGraph from './wave_period_graph'
+import TideTable from './tides'
+import TidesGraph from './tides_graph'
+import AstronomyTable from './sun'
 import usePagination from '../pagination'
 
 export default function PaddleConditions () {
@@ -13,9 +18,8 @@ export default function PaddleConditions () {
   const [isLoading, setLoading] = useState(false)
   const [readyToRender, setReadyToRender] = useState(false)
   const [lat, lng] = state.location
-  const today = new Date(new Date().setDate(new Date().getDate() - parseInt(1)))
+  const today = new Date(new Date().setHours(0, 0, 0, 0))
   const tenDaysOut = new Date(new Date().setDate(new Date().getDate() + parseInt(9)))
-  const end = `${tenDaysOut.getFullYear()}-${(tenDaysOut.getMonth() + 1).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}-${(tenDaysOut.getDate()).toLocaleString('en-US', { minimumIntegerDigits: 2, useGrouping: false })}`
   const params = [
     // wave info
     'secondarySwellDirection', 'secondarySwellHeight', 'secondarySwellPeriod',
@@ -36,6 +40,7 @@ export default function PaddleConditions () {
   useEffect(() => {
     if (isLoading === true) {
       console.log('calling api')
+      // console.log(new Date(new Date().setHours(0, 0, 0, 0).setDate(new Date().getDate())))
       Axios.all([
         Axios.get(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}&start=${today.toISOString()}&end=${tenDaysOut.toISOString()}`, {
           headers: {
@@ -43,20 +48,20 @@ export default function PaddleConditions () {
 
           }
         }
-        )
-        // Axios.get(`https://api.stormglass.io/v2/astronomy/point?lat=${lat}&lng=${lng}&end=${end}`, {
-        //   headers: {
-        //     Authorization: process.env.NEXT_PUBLIC_API_KEY
+        ),
+        Axios.get(`https://api.stormglass.io/v2/astronomy/point?lat=${lat}&lng=${lng}&start=${today.toISOString()}&end=${tenDaysOut.toISOString()}`, {
+          headers: {
+            Authorization: process.env.NEXT_PUBLIC_API_KEY
 
-        //   }
-        // }
-        // ),
-        // Axios.get(`https://api.stormglass.io/v2/tide/extremes/point?lat=${lat}&lng=${lng}&start=${today.toISOString()}&end=${tenDaysOut.toISOString()}`, {
-        //   headers: {
-        //     Authorization: process.env.NEXT_PUBLIC_API_KEY
+          }
+        }
+        ),
+        Axios.get(`https://api.stormglass.io/v2/tide/extremes/point?lat=${lat}&lng=${lng}&start=${today.toISOString()}&end=${tenDaysOut.toISOString()}`, {
+          headers: {
+            Authorization: process.env.NEXT_PUBLIC_API_KEY
 
-        //   }
-        // })
+          }
+        })
       ])
         .then(response => {
           dispatch({ type: 'SET_DATA', payload: response })
@@ -71,7 +76,7 @@ export default function PaddleConditions () {
     }
   }, [isLoading])
 
-  const _DATA = usePagination(state.data, 24)
+  const _DATA = usePagination(state.data, 24, 4)
 
   const handlePagination = (e, p) => {
     dispatch({ type: 'SET_PAGE', page: p })
@@ -107,7 +112,7 @@ export default function PaddleConditions () {
           <div>
             {console.log(isLoading)}
             {console.log(state.data)}
-            {console.log(state.firstData)}
+            {console.log(state.data[0].data.hours[state.firstData].time)}
             {console.log(state.lastData)}
           </div>
           <Box>
@@ -120,6 +125,11 @@ export default function PaddleConditions () {
               onChange={handlePagination}
             />
             <WindGraph />
+            <WaveGraph />
+            <WavePeriodGraph />
+            <TidesGraph />
+            <TideTable />
+            <AstronomyTable />
             <Pagination
               count={state.maxPage}
               size="large"

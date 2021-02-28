@@ -30,6 +30,21 @@ const Reducer = (state, action) => {
         ...state,
         lastData: action.lastData
       }
+    case 'SET_FIRST_TIDE_DATA_POINT':
+      return {
+        ...state,
+        firstTideData: action.firstTideData
+      }
+    case 'SET_LAST_TIDE_DATA_POINT':
+      return {
+        ...state,
+        lastTideData: action.lastTideData
+      }
+    case 'SET_SUN_DATA':
+      return {
+        ...state,
+        sunData: action.sunData
+      }
     case 'RESET':
       return {
         ...state

@@ -4,48 +4,42 @@ import React, { useEffect, useRef, useContext, useState } from 'react'
 import { Context } from '../state/Store'
 import Chartjs from 'chart.js'
 
-export default function WindGraph () {
+export default function WavePeriodGraph () {
   const [state, dispatch] = useContext(Context)
-
-  const date = state.data[0].data.hours.slice(state.firstData, state.lastData).map(item => {
-    return new Date(item.time).toLocaleString('en-US', { timeZone: 'HST' })
-  })
 
   const mixedChartConfig = {
     type: 'bar',
     data: {
       datasets: [{
-        label: 'Wind Speed (mph)',
+        label: 'Swell Period (s)',
         data: state.data[0].data.hours.slice(state.firstData, state.lastData).map(item => {
-          return item.windSpeed.noaa
-        }), // wind speed data here
+          return item.swellPeriod.sg
+        }),
         backgroundColor: 'rgba(0, 255, 255, .5)',
-        borderColor: 'rgba(0, 0, 0, 1)',
-        borderWidth: 2,
-        fill: true
+        borderColor: 'rgba(0, 255, 0, 1)',
+        borderWidth: 2
       }, {
-        label: 'Wind Gust (mph)',
+        label: 'Secondary Swell Period (s)',
         data: state.data[0].data.hours.slice(state.firstData, state.lastData).map(item => {
-          return item.gust.sg
-        }), // gust data here
-
-        // Changes this dataset to become a line
-        type: 'line',
+          return item.secondarySwellPeriod.sg
+        }),
         borderColor: 'rgba(255, 0, 0, 1)',
-        pointBackgroundColor: 'rgba(255, 255, 0, 1)',
-        fill: false
+        backgroundColor: 'rgba(255, 0, 0, .5)',
+        borderWidth: 2
+      }, {
+        label: 'Wind Wave Period (s)',
+        data: state.data[0].data.hours.slice(state.firstData, state.lastData).map(item => {
+          return item.windWavePeriod.sg
+        }),
+        backgroundColor: 'rgba(255, 255, 0, .5)',
+        borderColor: 'rgba(255, 255, 0, 1)',
+        borderWidth: 2
       }],
       labels: state.data[0].data.hours.slice(state.firstData, state.lastData).map(item => {
         return new Date(item.time).toLocaleTimeString('en-US', { timeZone: 'HST' })
       }) // Date (x-axis)
     },
     options: {
-      title: {
-        display: true,
-        text: new Date(state.data[0].data.hours[state.firstData].time).toLocaleDateString('en-US', { timeZone: 'HST' }),
-        position: 'top',
-        fontSize: 20
-      },
       scales: {
         yAxes: [
           {
