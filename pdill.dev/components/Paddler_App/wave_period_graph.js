@@ -64,7 +64,7 @@ export default function WavePeriodGraph () {
   }, [chartContainer, state.page])
 
   return (
-    <div style={{ paddingTop: '1rem' }}>
+    <div style={{ paddingTop: '1rem', position: 'relative', height: '40vh', width: '80vw' }}>
       <canvas responsive='true' ref={chartContainer} />
     </div>
   )

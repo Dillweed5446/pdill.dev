@@ -16,7 +16,7 @@ export default function BoxModel ({ children }) {
         box-sizing: content-box;
       },
       @media screen and (max-width: 500px) {
-        #content-box{
+        #content-box.jsx-3962342064{
           width: 100;
           margin: 0;
       }

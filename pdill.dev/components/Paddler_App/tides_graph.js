@@ -47,7 +47,7 @@ export default function TidesGraph () {
   }, [chartContainer, state.page])
 
   return (
-    <div>
+    <div style={{ paddingTop: '1rem', position: 'relative', height: '40vh', width: '80vw' }}>
       <canvas responsive='true' ref={chartContainer} />
     </div>
   )
