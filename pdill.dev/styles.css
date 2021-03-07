@@ -34,25 +34,21 @@ body {
     filter: invert(1);
   }
 
-  .MuiSelect-selectMenu-53 {
+  /* .MuiSelect-selectMenu-53 {
     min-height: 2em;
-  }
+  } */
 
   @media screen and (max-width: 500px) {
     body {
       animation: none;
   }
-  .MuiPaginationItem-sizeLarge-119 {
+  /* .MuiPaginationItem-sizeLarge-119 {
     height: 1.5rem;
     min-width: 2rem;
-  }
-  /* .sidebar.jsx-1720028043 {
-    position: fixed;
-    display: contents;
   } */
   .canvas {
     position: relative;
-    height:40vh;
-    width:80vw;
+    height: 45px;
+    width:90vw;
   }
 }

@@ -33,6 +33,17 @@ let theme = createMuiTheme({
         paddingBottom: '2%'
       }
     },
+    MuiSelect: {
+      root: {
+        minHeight: '2em'
+      }
+    },
+    MuiPaginationItem: {
+      root: {
+        height: '1.5rem',
+        minWidth: '2rem'
+      }
+    },
     MuiButton: {
       root: {
         color: '#DAD2D8',

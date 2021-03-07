@@ -17,10 +17,10 @@ export default function BoxModel ({ children }) {
       },
       @media screen and (max-width: 500px) {
         .content-box {
-          width: 100;
+          width: 100%;
           border: 1em groove #20A4F3;
           padding: 2%;
-          margin: 0;
+          margin: 0%;
           background-color: #DAD2D8;
           box-sizing: content-box;
       }
