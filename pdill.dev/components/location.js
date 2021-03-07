@@ -26,25 +26,15 @@ export default function LocationMenu () {
   ]
 
   function handleSelection (e) {
-    // console.log(locationOptions[e.target.value].location)
     dispatch({ type: 'SET_LOCATION', location: locationOptions[e.target.value].location })
     setLocationName(locationOptions[e.target.value].key)
-    // setAnchorEl(null)
   }
-
-  //   function locationChoices (props) {
-  //     return (
-  //       <MenuItem key={props.name}>{props.name}</MenuItem>
-  //     )
-  //   }
 
   return (
     <div>
       <FormControl className={classes.formControl}>
-        <InputLabel id="demo-simple-select-label">Location</InputLabel>
+        <InputLabel>Location</InputLabel>
         <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
           value={locationName}
           onChange={handleSelection}
         >
@@ -53,31 +43,6 @@ export default function LocationMenu () {
           ))}
         </Select>
       </FormControl>
-
-      {/* <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>
-        <TextField variant="standard" label="Location" defaultValue="Choose Location">
-          <Menu
-            id="simple-menu"
-            anchorReference="anchorEl"
-            anchorEl={anchorEl}
-            getContentAnchorEl={null}
-            anchorOrigin={{
-              vertical: 'bottom',
-              horizontal: 'left'
-            }}
-            transformOrigin={{
-              vertical: 'top',
-              horizontal: 'right'
-            }}
-            keepMounted
-            open={Boolean(anchorEl)}
-            onClose={handleClose}
-          >
-
-          </Menu>
-        </TextField>
-      </Button> */}
-
     </div>
 
   )
