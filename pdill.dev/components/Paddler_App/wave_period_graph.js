@@ -40,6 +40,8 @@ export default function WavePeriodGraph () {
       }) // Date (x-axis)
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: true,
       scales: {
         yAxes: [
           {

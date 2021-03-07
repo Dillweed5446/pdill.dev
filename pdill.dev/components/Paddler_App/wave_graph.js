@@ -42,6 +42,8 @@ export default function WaveGraph () {
       }) // Date (x-axis)
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: true,
       scales: {
         yAxes: [
           {

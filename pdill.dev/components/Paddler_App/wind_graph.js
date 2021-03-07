@@ -42,6 +42,8 @@ export default function WindGraph () {
         position: 'top',
         fontSize: 20
       },
+      responsive: true,
+      maintainAspectRatio: true,
       scales: {
         yAxes: [
           {

@@ -14,16 +14,14 @@ export default function BoxModel ({ children }) {
         margin: 4% 4% 2% 4%;
         background-color: #DAD2D8;
         box-sizing: content-box;
-      },
-      @media screen and (max-width: 500px) {
-        .content-box {
+        @media screen and (max-width: 500px) {
           width: 100%;
           border: 1em groove #20A4F3;
           padding: 2%;
           margin: 0%;
           background-color: #DAD2D8;
           box-sizing: content-box;
-      }
+        }
       }
         `}</style>
     </div>

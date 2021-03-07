@@ -23,6 +23,8 @@ export default function TidesGraph () {
       })
     },
     options: {
+      responsive: true,
+      maintainAspectRatio: true,
       scales: {
         yAxes: [
           {
