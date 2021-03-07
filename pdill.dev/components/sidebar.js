@@ -70,8 +70,10 @@ export default function Sidebar () {
         vertical-align: middle;
       }
       @media screen and (max-width: 500px) {
+        .sidebar{
         position: fixed;
         display: contents;
+      }
       }
 
         `}</style>
