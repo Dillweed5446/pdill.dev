@@ -32,7 +32,7 @@ export default function WindGraph () {
         fill: false
       }],
       labels: state.data[0].data.hours.slice(state.firstData, state.lastData).map(item => {
-        return new Date(item.time).toLocaleTimeString('en-US', { timeZone: 'HST' })
+        return new Date(item.time).toLocaleTimeString('en-US', { timeZone: 'HST' }).getHours()
       }) // Date (x-axis)
     },
     options: {

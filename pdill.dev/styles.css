@@ -56,7 +56,7 @@ body {
     padding: 2%;
     margin: 0;
     background-color: #DAD2D8;
-    box-sizing: content-box;
+    box-sizing: border-box;
   }
   /* .MuiPaginationItem-sizeLarge-119 {
     height: 1.5rem;
