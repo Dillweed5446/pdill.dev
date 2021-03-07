@@ -38,12 +38,13 @@ export default function WaveGraph () {
         fill: false
       }],
       labels: state.data[0].data.hours.slice(state.firstData, state.lastData).map(item => {
-        return new Date(item.time).toLocaleTimeString('en-US', { timeZone: 'HST' })
+        return new Date(item.time).toLocaleTimeString('en-US', { timeZone: 'HST', hour: '2-digit', hour12: false })
       }) // Date (x-axis)
     },
     options: {
       responsive: true,
       maintainAspectRatio: true,
+      aspectRatio: 1.5,
       scales: {
         yAxes: [
           {

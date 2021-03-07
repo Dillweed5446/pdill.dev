@@ -100,7 +100,7 @@ export default function PaddleConditions () {
           <form>
             <LocationMenu />
           </form>
-          <Button variant="contained" size="small" onClick={clickHandler}>Submit</Button>
+          <Button variant="contained" size="small" onClick={clickHandler} style={{ marginBottom: '1rem' }}>Submit</Button>
         </BoxModel>
       </Fragment>
     )
@@ -114,7 +114,7 @@ export default function PaddleConditions () {
           <form>
             <LocationMenu />
           </form>
-          <Button variant="contained" size="small" onClick={clickHandler}>Submit</Button>
+          <Button variant="contained" size="small" onClick={clickHandler} style={{ marginBottom: '1rem' }}>Submit</Button>
           <div>
             {console.log(isLoading)}
             {console.log(state.data)}

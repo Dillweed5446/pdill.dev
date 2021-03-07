@@ -19,12 +19,13 @@ export default function TidesGraph () {
         fill: false
       }],
       labels: state.data[2].data.data.slice(state.firstTideData, state.lastTideData).map(item => {
-        return new Date(item.time).toLocaleString('en-US', { timeZone: 'HST' })
+        return new Date(item.time).toLocaleTimeString('en-US', { timeZone: 'HST' })
       })
     },
     options: {
       responsive: true,
       maintainAspectRatio: true,
+      aspectRatio: 1.5,
       scales: {
         yAxes: [
           {
