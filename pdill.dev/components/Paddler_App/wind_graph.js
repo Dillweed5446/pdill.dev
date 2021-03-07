@@ -66,7 +66,7 @@ export default function WindGraph () {
   }, [chartContainer, state.page])
 
   return (
-    <div style={{ paddingTop: '1rem', position: 'relative', height: '40vh', width: '80vw' }}>
+    <div className="canvas" style={{ paddingTop: '1rem' }}>
       <canvas ref={chartContainer} />
     </div>
   )
