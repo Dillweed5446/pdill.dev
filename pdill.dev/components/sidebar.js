@@ -69,7 +69,7 @@ export default function Sidebar () {
         font-size: 3rem;
         vertical-align: middle;
       }
-      @media screen and (min-width: 600px) {
+      @media screen and (max-width: 500px) {
         position: fixed;
         display: contents;
       }
