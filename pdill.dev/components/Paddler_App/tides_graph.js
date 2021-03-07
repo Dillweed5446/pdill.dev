@@ -44,7 +44,7 @@ export default function TidesGraph () {
       const newChartInstance = new Chartjs(chartContainer.current, chartConfig)
       setChartInstance(newChartInstance)
     }
-  }, [chartContainer, state.page])
+  }, [chartContainer, state.page, state.location])
 
   return (
     <div>

@@ -63,7 +63,7 @@ export default function WaveGraph () {
       const newChartInstance = new Chartjs(chartContainer.current, mixedChartConfig)
       setChartInstance(newChartInstance)
     }
-  }, [chartContainer, state.page])
+  }, [chartContainer, state.page, state.location])
 
   return (
     <div style={{ paddingTop: '1rem' }}>
