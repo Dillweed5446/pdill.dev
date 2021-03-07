@@ -33,3 +33,18 @@ body {
   a:hover {
     filter: invert(1);
   }
+
+  @media screen and (min-width: 500px) {
+    body {
+    background: url("./public/ocean.jpg");
+  }
+  #content-box {
+    margin: 0;
+    width: 100;
+    height: 100;
+  }
+  .MuiPaginationItem-sizeLarge-119 {
+    height: 1.5rem;
+    min-width: 2rem;
+  }
+}
