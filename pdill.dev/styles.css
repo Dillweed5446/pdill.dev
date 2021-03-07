@@ -47,4 +47,8 @@ body {
     height: 1.5rem;
     min-width: 2rem;
   }
+  .sidebar.jsx-1720028043 {
+    position: fixed;
+    display: contents;
+  }
 }
