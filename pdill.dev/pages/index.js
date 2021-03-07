@@ -126,7 +126,7 @@ export default function Home () {
             <Grid
               item xs
             >
-              <a href="/paddleWrapper" className="card" target="_blank" rel="noopener noreferrer">
+              <a href="/paddleWrapper" className="card">
                 <Typography variant="h4" style={{ textShadow: '-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black' }}>Ocean Paddling Weather App</Typography>
                 <Typography variant="body1" color="secondary"
                 >Application that I&apos;ve built from scratch for checking wind, wave, current, tide and general weather conditions for outrigger canoe paddling.

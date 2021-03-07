@@ -6,7 +6,7 @@ export default function BoxModel ({ children }) {
   return (
     <div className="content-box" theme={ theme } >
       {children}
-      <style jsx>{`
+      {/* <style jsx>{`
       .content-box {
         width: 70%;
         border: 1em groove #20A4F3;
@@ -23,7 +23,7 @@ export default function BoxModel ({ children }) {
         background-color: #DAD2D8;
         box-sizing: content-box;
       }
-        `}</style>
+        `}</style> */}
     </div>
   )
 }

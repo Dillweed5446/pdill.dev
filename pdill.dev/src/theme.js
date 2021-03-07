@@ -34,12 +34,12 @@ let theme = createMuiTheme({
       }
     },
     MuiSelect: {
-      root: {
+      selectMenu: {
         minHeight: '2em'
       }
     },
-    MuiPaginationItem: {
-      root: {
+    MuiTablePagination: {
+      item: {
         height: '1.5rem',
         minWidth: '2rem'
       }

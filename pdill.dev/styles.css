@@ -37,10 +37,26 @@ body {
   /* .MuiSelect-selectMenu-53 {
     min-height: 2em;
   } */
+  .content-box {
+    width: 70%;
+    border: 1em groove #20A4F3;
+    padding: 2%;
+    margin: 4% 4% 2% 4%;
+    background-color: #DAD2D8;
+    box-sizing: content-box;
+  }
 
   @media screen and (max-width: 500px) {
     body {
       animation: none;
+  }
+  .content-box {
+    width: 100%;
+    border: 1em groove #20A4F3;
+    padding: 2%;
+    margin: 0%;
+    background-color: #DAD2D8;
+    box-sizing: content-box;
   }
   /* .MuiPaginationItem-sizeLarge-119 {
     height: 1.5rem;
