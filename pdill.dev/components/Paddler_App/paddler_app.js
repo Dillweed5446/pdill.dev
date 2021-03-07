@@ -71,6 +71,11 @@ export default function PaddleConditions () {
     }
   }, [isLoading])
 
+  useEffect(() => {
+    setReadyToRender(false)
+    dispatch({ type: 'SET_DATA', payload: [] })
+  }, [state.location])
+
   const _DATA = usePagination(state.data, 24, 4)
 
   const handlePagination = (e, p) => {

@@ -61,7 +61,7 @@ export default function WavePeriodGraph () {
       const newChartInstance = new Chartjs(chartContainer.current, mixedChartConfig)
       setChartInstance(newChartInstance)
     }
-  }, [chartContainer, state.page, state.location])
+  }, [chartContainer, state.page])
 
   return (
     <div style={{ paddingTop: '1rem' }}>
