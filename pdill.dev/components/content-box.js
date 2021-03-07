@@ -1,7 +1,8 @@
 import React from 'react'
 import theme from '../src/theme'
+import PropTypes from 'prop-types'
 
-export default function BoxModel ({children}) {
+export default function BoxModel ({ children }) {
   return (
     <div theme={ theme } style={{
       width: '70%',
@@ -14,4 +15,13 @@ export default function BoxModel ({children}) {
       {children}
     </div>
   )
+}
+
+BoxModel.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.array,
+    PropTypes.object,
+    PropTypes.func
+  ])
 }

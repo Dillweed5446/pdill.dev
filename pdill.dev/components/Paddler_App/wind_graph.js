@@ -7,10 +7,6 @@ import Chartjs from 'chart.js'
 export default function WindGraph () {
   const [state, dispatch] = useContext(Context)
 
-  const date = state.data[0].data.hours.slice(state.firstData, state.lastData).map(item => {
-    return new Date(item.time).toLocaleString('en-US', { timeZone: 'HST' })
-  })
-
   const mixedChartConfig = {
     type: 'bar',
     data: {

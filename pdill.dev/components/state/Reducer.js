@@ -3,7 +3,7 @@ const Reducer = (state, action) => {
     case 'SET_LOCATION':
       return {
         ...state,
-        location: action.payload
+        location: action.location
       }
     case 'SET_DATA':
       return {
