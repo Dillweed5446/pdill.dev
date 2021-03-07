@@ -3,9 +3,7 @@ import Reducer from './Reducer'
 import PropTypes from 'prop-types'
 
 const initialState = {
-  location: [21.3, -157.8], // Honaunau Bay
-  // location: [19.5, -155.9], // Kealakekua Bay
-  // location: [19.73, -155.07], // Hilo Bay
+  location: [],
   data: [],
   error: null,
   page: 1,

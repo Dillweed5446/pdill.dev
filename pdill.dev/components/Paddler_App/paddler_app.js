@@ -1,4 +1,4 @@
-import { TextField, Typography, Button } from '@material-ui/core'
+import { Typography, Button } from '@material-ui/core'
 import Box from '@material-ui/core/Box'
 import { Pagination } from '@material-ui/lab'
 import React, { useContext, Fragment, useEffect, useState } from 'react'
@@ -12,6 +12,7 @@ import TideTable from './tides'
 import TidesGraph from './tides_graph'
 import AstronomyTable from './sun'
 import usePagination from '../pagination'
+import LocationMenu from '../location'
 
 export default function PaddleConditions () {
   const [state, dispatch] = useContext(Context)
@@ -32,15 +33,9 @@ export default function PaddleConditions () {
     'cloudCover', 'waterTemperature', 'airTemperature'
   ].join(',')
 
-  const clickHandler = (e) => {
-    e.preventDefault()
-    setLoading(true)
-  }
-
   useEffect(() => {
     if (isLoading === true) {
       console.log('calling api')
-      // console.log(new Date(new Date().setHours(0, 0, 0, 0).setDate(new Date().getDate())))
       Axios.all([
         Axios.get(`https://api.stormglass.io/v2/weather/point?lat=${lat}&lng=${lng}&params=${params}&start=${today.toISOString()}&end=${tenDaysOut.toISOString()}`, {
           headers: {
@@ -84,6 +79,12 @@ export default function PaddleConditions () {
     _DATA.currentData(p)
   }
 
+  const clickHandler = (e) => {
+    e.preventDefault()
+    console.log(state.location)
+    setLoading(true)
+  }
+
   if (readyToRender === false) {
     return (
       <Fragment>
@@ -92,7 +93,7 @@ export default function PaddleConditions () {
             Ocean Paddler Weather Report
           </Typography>
           <form>
-            <TextField variant="standard" label="Location" defaultValue="Honaunau-Napoopoo" />
+            <LocationMenu />
           </form>
           <Button variant="contained" size="small" onClick={clickHandler}>Submit</Button>
         </BoxModel>
@@ -103,17 +104,16 @@ export default function PaddleConditions () {
       <Fragment>
         <BoxModel>
           <Typography variant="h2" className="name" color="primary" id="top">
-          Ocean Paddler Weather Report
+            Ocean Paddler Weather Report
           </Typography>
           <form>
-            <TextField variant="standard" label="Location" defaultValue="Honaunau-Napoopoo" />
+            <LocationMenu />
           </form>
           <Button variant="contained" size="small" onClick={clickHandler}>Submit</Button>
           <div>
             {console.log(isLoading)}
             {console.log(state.data)}
-            {console.log(state.data[0].data.hours[state.firstData].time)}
-            {console.log(state.lastData)}
+            {console.log(state.location)}
           </div>
           <Box>
             <Pagination
