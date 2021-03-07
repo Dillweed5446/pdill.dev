@@ -67,7 +67,7 @@ export default function WaveGraph () {
 
   return (
     <div style={{ paddingTop: '1rem' }}>
-      <canvas ref={chartContainer} />
+      <canvas responsive='true' ref={chartContainer} />
     </div>
   )
 }
