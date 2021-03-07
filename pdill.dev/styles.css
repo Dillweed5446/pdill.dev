@@ -51,7 +51,7 @@ body {
       animation: none;
   }
   .content-box {
-    width: 100;
+    width: 100vw;
     border: 1em groove #20A4F3;
     padding: 2%;
     margin: 0;
