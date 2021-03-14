@@ -1,6 +1,11 @@
 {
   "name": "pdill.dev",
-  "version": "0.1.0",
+  "author": {
+    "name": "Paul Dill",
+    "email": "paul@pdill.dev",
+    "url": "https://pdill.dev"
+  },
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -8,6 +13,12 @@
     "start": "next start",
     "test": "mocha"
   },
+  "bugs": "https://github.com/Dillweed5446/pdill.dev/issues",
+  "homepage": "https://pdill.dev",
+  "license": "MIT",
+  "keywords": ["developer portfolio", "ocean weather", "paddling"],
+  "repository": "github:Dillweed5446/pdill.dev",
+  "main": "/pages/index.js",
   "dependencies": {
     "@material-ui/core": "^4.10.1",
     "@material-ui/icons": "^4.9.1",
