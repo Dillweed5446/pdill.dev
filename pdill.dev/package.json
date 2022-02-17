@@ -33,7 +33,7 @@
     "harmony": "^1.5.1",
     "luxon": "^1.25.0",
     "mongodb": "^3.6.0",
-    "next": "^10.0.5",
+    "next": "^12.1.0",
     "next-images": "^1.4.0",
     "next-progressbar": "^1.0.0",
     "npm-check-updates": "^11.3.0",
