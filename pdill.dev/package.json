@@ -31,7 +31,7 @@
     "chart.js": "^2.9.4",
     "dotenv-webpack": "^6.0.0",
     "harmony": "^1.5.1",
-    "luxon": "^1.25.0",
+    "luxon": "^2.5.2",
     "mongodb": "^3.6.0",
     "next": "^10.0.5",
     "next-images": "^1.4.0",
